@@ -305,7 +305,7 @@ class ROTOMIWebsite {
         .catch(() => {
             btn.textContent = originalText;
             btn.disabled = false;
-            this.showFormMessage(form, 'Network error. Please email us directly at sentinel@rotomi.de', 'error');
+            this.showFormMessage(form, 'Network error. Please email us directly at hi@rotomi.de', 'error');
         });
     }
 
