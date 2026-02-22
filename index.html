@@ -183,6 +183,20 @@
                 <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 0 1 0 4h-.09c-.658.003-1.25.396-1.51 1z"/></svg></div><h3>Skill Governance Lifecycle</h3><p class="feature-card__subtitle">Draft &rarr; Approve &rarr; Sign &rarr; Publish &rarr; Monitor</p><p>YAML-based skill definitions with Ed25519 signing. Supply-chain integrity verification. A/B testing, metrics tracking, and LLM usage budgets.</p><span class="feature-card__benefit">No agent skill runs without review and signing</span></div>
                 <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h3>Distributed Kill Switch</h3><p class="feature-card__subtitle">Immediate emergency halt</p><p>Durable kill switch that halts all agent execution across replicas within seconds. Persists across restarts. Because "undo" doesn't exist for sent emails.</p><span class="feature-card__benefit">One click to stop everything. Instantly.</span></div>
             </div>
+            <!-- Security Hardening Strip -->
+            <div class="features__security">
+                <h3>Defense-in-Depth Security</h3>
+                <div class="security-strip">
+                    <span class="security-strip__item">Prompt Injection Detection (13-pattern heuristic fusion)</span>
+                    <span class="security-strip__item">PII Scanner (15+ regex patterns)</span>
+                    <span class="security-strip__item">AES-256-GCM Encrypted Memory Store</span>
+                    <span class="security-strip__item">Deno Sandbox (restricted permissions)</span>
+                    <span class="security-strip__item">CSRF Enforcement on Mutations</span>
+                    <span class="security-strip__item">Token-Bucket Rate Limiting</span>
+                    <span class="security-strip__item">Request Body Guard (configurable max size)</span>
+                    <span class="security-strip__item">Secret Validator (fail-fast on placeholders)</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -329,10 +343,37 @@
                     <a href="#contact" class="btn btn--outline btn--full-width">Contact Sales</a>
                 </div>
             </div>
+            <!-- Add-Ons -->
+            <div class="pricing__addons">
+                <h3>Optional Add-Ons</h3>
+                <div class="addons-grid">
+                    <div class="addon-item"><span class="addon-item__name">Additional Managed Environment</span><span class="addon-item__price">&euro;16,500/year</span></div>
+                    <div class="addon-item"><span class="addon-item__name">High-Availability Operations Package</span><span class="addon-item__price">&euro;39,000/year</span></div>
+                    <div class="addon-item"><span class="addon-item__name">Compliance Evidence Package</span><span class="addon-item__price">&euro;32,000/year</span></div>
+                    <div class="addon-item"><span class="addon-item__name">Custom Adapter Implementation Sprint</span><span class="addon-item__price">&euro;28,000/sprint</span></div>
+                </div>
+            </div>
+            <!-- SLA Support Matrix -->
+            <div class="pricing__sla">
+                <h3>Support &amp; SLA Matrix</h3>
+                <div class="sla-table-wrapper">
+                    <table class="sla-table">
+                        <thead><tr><th>Severity</th><th>Standard</th><th>Premium</th><th>Premium+</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Sev-1</strong> Critical</td><td>Next business day</td><td>1h response, 24/7</td><td>30min response, 24/7</td></tr>
+                            <tr><td><strong>Sev-2</strong> High</td><td>8 business hours</td><td>4 hours</td><td>2 hours</td></tr>
+                            <tr><td><strong>Sev-3</strong> Medium</td><td>3 business days</td><td>Next business day</td><td>8 business hours</td></tr>
+                            <tr><td><strong>Sev-4</strong> Low</td><td>5 business days</td><td>2 business days</td><td>Next business day</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="pricing__note">All prices in EUR. USD invoicing available on request. Annual billing, net 30. Initial term 12 months with annual renewal.</p>
+            </div>
+            <!-- Pilot Callout -->
             <div class="pricing__pilot">
                 <div class="pilot-callout">
                     <h3>30-60 Day Pilot</h3>
-                    <p>Try Sentinel Agent on one priority workflow. Baseline KPIs measured. <strong>Up to 50% of pilot fee credited toward Year 1 subscription.</strong></p>
+                    <p>Try Sentinel Agent on one priority workflow. Baseline KPIs measured &mdash; cycle-time reduction, approval latency, compliance evidence completion rate. <strong>Up to 50% of pilot fee credited toward Year 1 subscription.</strong></p>
                     <a href="#contact" class="btn btn--primary">Start Your Pilot</a>
                 </div>
             </div>
@@ -413,6 +454,33 @@
                     <button class="faq-item__question" aria-expanded="false"><span>What about the August 2026 EU AI Act deadline?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
                     <div class="faq-item__answer"><p>Sentinel Agent includes AI Act risk classification (Annex III), technical documentation support (Art. 11), and transparency disclosure headers (Art. 50). Our compliance module generates the evidence artifacts regulators expect. Starting a pilot now gives you a proven governance framework well before the deadline.</p></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">Why Sentinel Agent</span>
+                <h2 class="section__title">How We Compare</h2>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead><tr><th>Capability</th><th class="comparison-table__highlight">Sentinel Agent</th><th>LangSmith / LangFuse</th><th>AWS Bedrock Guardrails</th><th>Guardrails AI</th><th>DIY</th></tr></thead>
+                    <tbody>
+                        <tr><td>Pre-execution policy enforcement</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>Partial</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>Immutable audit trail (Ed25519)</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>EU AI Act compliance module</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>GDPR data-subject rights APIs</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>Self-hosted / air-gapped</td><td class="comparison-table__highlight">&check;</td><td>Cloud only</td><td>AWS only</td><td>&check;</td><td>&check;</td></tr>
+                        <tr><td>Human approval workflows</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>OIDC + SAML + SCIM</td><td class="comparison-table__highlight">&check;</td><td>SAML</td><td>IAM</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>Kill switch (distributed)</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>Prompt injection detection</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&check;</td><td>&check;</td><td>Build it</td></tr>
+                        <tr><td>Time to production</td><td class="comparison-table__highlight">2 weeks</td><td>1 day</td><td>1 day</td><td>1 week</td><td>18+ months</td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>

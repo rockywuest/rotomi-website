@@ -1787,6 +1787,209 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
+   SECURITY STRIP (under Features)
+   ============================================ */
+.features__security {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--color-border);
+}
+
+.features__security h3 {
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-16);
+  text-align: center;
+}
+
+.security-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  justify-content: center;
+}
+
+.security-strip__item {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-6) var(--space-12);
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  color: #059669;
+}
+
+[data-theme="dark"] .security-strip__item {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34D399;
+}
+
+/* ============================================
+   ADD-ONS (under Pricing)
+   ============================================ */
+.pricing__addons {
+  margin-bottom: 40px;
+}
+
+.pricing__addons h3 {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-16);
+  text-align: center;
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-12);
+}
+
+.addon-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  padding: var(--space-12) var(--space-16);
+}
+
+.addon-item__name {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.addon-item__price {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  white-space: nowrap;
+  margin-left: var(--space-12);
+}
+
+/* ============================================
+   SLA TABLE (under Pricing)
+   ============================================ */
+.pricing__sla {
+  margin-bottom: 40px;
+}
+
+.pricing__sla h3 {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-16);
+  text-align: center;
+}
+
+.sla-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sla-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.sla-table th,
+.sla-table td {
+  padding: var(--space-10) var(--space-16);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sla-table th {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+}
+
+.sla-table td {
+  color: var(--color-text-secondary);
+}
+
+.sla-table td strong {
+  color: var(--color-text);
+}
+
+.pricing__note {
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-16);
+}
+
+/* ============================================
+   COMPARISON TABLE
+   ============================================ */
+.comparison {
+  padding: 100px 0;
+  background: var(--color-background);
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  min-width: 700px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: var(--space-10) var(--space-16);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+.comparison-table th {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+  white-space: nowrap;
+}
+
+.comparison-table__highlight {
+  background: rgba(6, 182, 212, 0.06) !important;
+  color: var(--color-text) !important;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .comparison-table__highlight {
+  background: rgba(6, 182, 212, 0.1) !important;
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table td {
+  color: var(--color-text-secondary);
+}
+
+/* ============================================
    ANIMATIONS
    ============================================ */
 @keyframes fadeInUp {
@@ -1855,6 +2058,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .stats__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .addons-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1943,6 +2150,14 @@ h1, h2, h3, h4, h5, h6 {
 
   .cta__form-grid {
     grid-template-columns: 1fr;
+  }
+
+  .addons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison {
+    padding: 64px 0;
   }
 
   .footer__content {
