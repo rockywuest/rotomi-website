@@ -6,11 +6,11 @@
  * validates & sanitises input, then sends an e-mail via
  * PHP mail() (works out-of-the-box on KAS / All-Inkl).
  *
- * Target mailbox: sentinel@rotomi.de
+ * Target mailbox: hi@rotomi.de
  */
 
 // ── Configuration ──────────────────────────────────────────
-$recipient = 'sentinel@rotomi.de';
+$recipient = 'hi@rotomi.de';
 $site_name = 'ROTOMI';
 
 // ── CORS & Headers ─────────────────────────────────────────
