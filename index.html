@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROTOMI | Intelligent Systems for the Autonomous Enterprise</title>
-    <meta name="description" content="ROTOMI builds enterprise-grade AI platforms for governance, robotics, and multi-agent orchestration. European-engineered. Open source. By FRECH & WUEST GmbH.">
-    <meta name="keywords" content="ROTOMI, AI governance, robotics middleware, multi-agent orchestration, EU AI Act, FRECH WUEST, enterprise AI, open source">
+    <meta name="description" content="ROTOMI builds enterprise-grade AI platforms for governance, robotics, and multi-agent orchestration. European-engineered. Built in Hamburg. By FRECH & WUEST GmbH.">
+    <meta name="keywords" content="ROTOMI, AI governance, robotics middleware, multi-agent orchestration, EU AI Act, FRECH WUEST, enterprise AI, enterprise-grade">
     <meta property="og:title" content="ROTOMI — Precision in Motion, Intelligence in Action">
-    <meta property="og:description" content="Enterprise-grade AI platforms for governance, robotics, and multi-agent orchestration. European-engineered. Open source.">
+    <meta property="og:description" content="Enterprise-grade AI platforms for governance, robotics, and multi-agent orchestration. European-engineered. enterprise-grade.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rotomi.de">
     <meta name="twitter:card" content="summary_large_image">
@@ -605,7 +605,22 @@
             }
         }
     </style>
-</head>
+    <style>
+        .rotomi-acronym { margin: 4rem 0; padding: 3rem 0; border-top: 1px solid rgba(30, 41, 59, 0.1); }
+        .rotomi-acronym__title { font-size: 1.5rem; font-weight: 700; color: var(--text-primary, #1e293b); margin-bottom: 2rem; text-align: center; }
+        .rotomi-acronym__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 800px; margin: 0 auto; }
+        .rotomi-acronym__item { display: flex; align-items: stretch; gap: 0.75rem; padding: 0.75rem 1rem; border-radius: 12px; background: rgba(30, 41, 59, 0.03); transition: background 0.3s ease; }
+        .rotomi-acronym__item:hover { background: rgba(30, 41, 59, 0.06); }
+        .rotomi-acronym__letter { font-size: 2.4rem; font-weight: 800; color: var(--accent, #0ea5e9); line-height: 1; display: flex; align-items: center; }
+        .rotomi-acronym__meanings { display: flex; flex-direction: column; justify-content: space-between; padding: 2px 0; }
+        .rotomi-acronym__word { display: block; font-size: 0.95rem; color: var(--text-secondary, #64748b); font-weight: 500; line-height: 1.2; }
+        @media (max-width: 768px) { .rotomi-acronym__grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } }
+        @media (max-width: 480px) { .rotomi-acronym__grid { grid-template-columns: 1fr; } }
+        [data-theme="dark"] .rotomi-acronym { border-top-color: rgba(255, 255, 255, 0.1); }
+        [data-theme="dark"] .rotomi-acronym__item { background: rgba(255, 255, 255, 0.05); }
+        [data-theme="dark"] .rotomi-acronym__item:hover { background: rgba(255, 255, 255, 0.08); }
+    </style>
+    </head>
 <body>
     <!-- Navigation -->
     <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -639,7 +654,7 @@
             <div class="brand-hero__jp">&#12525;&#12488;&#12511;</div>
             <hr class="brand-hero__rule">
             <p class="brand-hero__tagline">Precision in Motion, Intelligence in Action.</p>
-            <p class="brand-hero__desc">We build enterprise-grade AI platforms for governance, robotics, and multi-agent orchestration. European-engineered. Open source.</p>
+            <p class="brand-hero__desc">We build enterprise-grade AI platforms for governance, robotics, and multi-agent orchestration. European-engineered. enterprise-grade.</p>
             <div class="brand-hero__actions">
                 <a href="#products" class="btn btn--primary btn--lg">Explore Products</a>
                 <a href="#contact" class="btn btn--outline btn--lg">Contact Us</a>
@@ -653,7 +668,7 @@
             <div class="section__header">
                 <span class="section__label section__label--jp">&#35069;&#21697; &middot; Products</span>
                 <h2 class="section__title">Three Platforms. One Vision.</h2>
-                <p class="section__subtitle">From AI agent governance to autonomous robotics to multi-agent orchestration &mdash; ROTOMI platforms share a commitment to safety, compliance, and open-source transparency.</p>
+                <p class="section__subtitle">From AI agent governance to autonomous robotics to multi-agent orchestration &mdash; ROTOMI platforms share a commitment to safety, compliance, and enterprise-grade transparency.</p>
             </div>
             <div class="showcase__grid">
                 <!-- Sentinel Agent -->
@@ -695,7 +710,7 @@
                             <span class="showcase-card__tag">Geofence</span>
                             <span class="showcase-card__tag">528 Tests</span>
                             <span class="showcase-card__tag">98% Coverage</span>
-                            <span class="showcase-card__tag">Apache 2.0</span>
+                            <span class="showcase-card__tag">Commercial License</span>
                         </div>
                         <a href="aria-robotics.html" class="showcase-card__link">
                             Learn more
@@ -738,11 +753,60 @@
                     <span class="section__label section__label--jp">&#20250;&#31038; &middot; About</span>
                     <h2 class="section__title">European Engineering.<br>Japanese Precision.</h2>
                     <p class="about__mission">ROTOMI builds intelligent systems that bridge the gap between human intent and machine capability. We believe AI platforms should be self-hosted, auditable, and compliant by architecture &mdash; not by afterthought.</p>
-                    <p class="about__mission">Every platform we ship is open source, rigorously tested, and designed for the regulatory reality of operating in the European Union.</p>
+                    <p class="about__mission">Every platform we ship is enterprise-grade, rigorously tested, and designed for the regulatory reality of operating in the European Union.</p>
                     <div class="about__company">
                         <strong>FRECH &amp; WUEST GmbH</strong> &middot; HRB 112702, Amtsgericht Hamburg &middot; Gesch&auml;ftsf&uuml;hrer: Rocky Wuest
                     </div>
                 </div>
+                                <!-- What ROTOMI Stands For -->
+                <div class="rotomi-acronym">
+                    <h3 class="rotomi-acronym__title">What ROTOMI Stands For</h3>
+                    <div class="rotomi-acronym__grid">
+                        <div class="rotomi-acronym__item">
+                            <span class="rotomi-acronym__letter">R</span>
+                            <span class="rotomi-acronym__meanings">
+                                <span class="rotomi-acronym__word">Robotics</span>
+                                <span class="rotomi-acronym__word">Revolutionary</span>
+                            </span>
+                        </div>
+                        <div class="rotomi-acronym__item">
+                            <span class="rotomi-acronym__letter">O</span>
+                            <span class="rotomi-acronym__meanings">
+                                <span class="rotomi-acronym__word">Operations</span>
+                                <span class="rotomi-acronym__word">Optimization</span>
+                            </span>
+                        </div>
+                        <div class="rotomi-acronym__item">
+                            <span class="rotomi-acronym__letter">T</span>
+                            <span class="rotomi-acronym__meanings">
+                                <span class="rotomi-acronym__word">Technology</span>
+                                <span class="rotomi-acronym__word">Transformation</span>
+                            </span>
+                        </div>
+                        <div class="rotomi-acronym__item">
+                            <span class="rotomi-acronym__letter">O</span>
+                            <span class="rotomi-acronym__meanings">
+                                <span class="rotomi-acronym__word">Orchestration</span>
+                                <span class="rotomi-acronym__word">Organization</span>
+                            </span>
+                        </div>
+                        <div class="rotomi-acronym__item">
+                            <span class="rotomi-acronym__letter">M</span>
+                            <span class="rotomi-acronym__meanings">
+                                <span class="rotomi-acronym__word">Machine</span>
+                                <span class="rotomi-acronym__word">Modernization</span>
+                            </span>
+                        </div>
+                        <div class="rotomi-acronym__item">
+                            <span class="rotomi-acronym__letter">I</span>
+                            <span class="rotomi-acronym__meanings">
+                                <span class="rotomi-acronym__word">Intelligence</span>
+                                <span class="rotomi-acronym__word">Innovation</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="values-grid">
                     <div class="value-row">
                         <div class="value-row__kanji">&#38761;&#26032;</div>
@@ -776,7 +840,7 @@
                         <div class="value-row__kanji">&#25913;&#21892;</div>
                         <div class="value-row__content">
                             <div class="value-row__name">Kaizen <span>Continuous Improvement</span></div>
-                            <p class="value-row__desc">Open source by conviction. Community-driven evolution. Every commit reviewed, every release tested.</p>
+                            <p class="value-row__desc">enterprise-grade by conviction. Community-driven evolution. Every commit reviewed, every release tested.</p>
                         </div>
                     </div>
                 </div>
@@ -798,7 +862,7 @@
                         </div>
                         <div class="contact__detail-text">
                             <strong>Email</strong>
-                            <a href="mailto:info@frechundwuest.de">info@frechundwuest.de</a>
+                            <a href="mailto:hi@rotomi.de">hi@rotomi.de</a>
                         </div>
                     </div>
                     <div class="contact__detail">
@@ -876,11 +940,11 @@
                         </ul>
                     </div>
                     <div class="footer__section">
-                        <h4>Open Source</h4>
+                        <h4>Products</h4>
                         <ul>
-                            <li><a href="https://github.com/rockywuest/sentinel_agent" target="_blank" rel="noopener">Sentinel Agent on GitHub</a></li>
-                            <li><a href="https://github.com/rockywuest/aria-robotics" target="_blank" rel="noopener">ARIA Robotics on GitHub</a></li>
-                            <li><a href="https://github.com/rockywuest/agent_company" target="_blank" rel="noopener">Agent Company on GitHub</a></li>
+                            <li><a href="sentinel-agent.html" target="_blank" rel="noopener">Sentinel Agent</a></li>
+                            <li><a href="aria-robotics.html" target="_blank" rel="noopener">ARIA Robotics</a></li>
+                            <li><a href="agent-company.html" target="_blank" rel="noopener">Agent Company</a></li>
                         </ul>
                     </div>
                     <div class="footer__section">
