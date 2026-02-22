@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROTOMI | Sentinel Agent — Enterprise AI Agent Governance Platform</title>
+    <meta name="description" content="Self-hosted AI agent governance platform with EU AI Act compliance, GDPR data governance, and deterministic policy enforcement. Built by FRECH & WUEST GmbH.">
+    <meta name="keywords" content="AI governance, AI agent platform, EU AI Act, GDPR compliance, NIS2, self-hosted AI, enterprise AI security, agent governance, SHIELD policy engine">
+    <meta property="og:title" content="ROTOMI Sentinel Agent — Enterprise AI Agent Governance">
+    <meta property="og:description" content="The only self-hosted AI agent platform where compliance is architecture, not afterthought. EU AI Act ready.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rotomi.de">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ROTOMI Sentinel Agent">
+    <meta name="twitter:description" content="Enterprise AI Agent Governance. Self-Hosted. EU AI Act Ready.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Sentinel Agent",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Linux, Docker, Kubernetes",
+      "creator": {
+        "@type": "Organization",
+        "name": "FRECH & WUEST GmbH",
+        "url": "https://rotomi.de"
+      },
+      "description": "Self-hosted enterprise AI agent governance platform with EU AI Act compliance, GDPR data governance, and deterministic SHIELD policy enforcement."
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav__container">
+            <a href="index.html" class="nav__brand">
+                <span class="nav__logo">ROTOMI</span>
+            </a>
+            <button class="nav__hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav__menu" id="navMenu">
+                <a href="index.html#products" class="nav__link">Products</a>
+                <a href="#features" class="nav__link">Features</a>
+                <a href="#compliance" class="nav__link">Compliance</a>
+                <a href="#contact" class="nav__link">Contact</a>
+                <a href="#contact" class="btn btn--primary btn--sm nav__cta">Request Pilot</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="theme-toggle__icon theme-toggle__icon--light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero__background"></div>
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__logo">
+                    <h1 class="hero__title">Sentinel Agent</h1>
+                    <div class="hero__brand">by <span class="hero__brand-name">ROTOMI</span></div>
+                </div>
+                <p class="hero__tagline">Enterprise AI Agent Governance.<br>Self-Hosted. EU AI Act Ready.</p>
+                <p class="hero__description">The only AI agent platform where compliance, security, and human oversight are architecture — not afterthoughts.</p>
+                <div class="hero__actions">
+                    <a href="#contact" class="btn btn--primary btn--lg">Request a Pilot</a>
+                    <a href="#features" class="btn btn--outline btn--lg">Explore Features</a>
+                </div>
+                <div class="hero__badges">
+                    <span class="badge">EU AI Act</span>
+                    <span class="badge">GDPR</span>
+                    <span class="badge">NIS2</span>
+                    <span class="badge">ISO 42001</span>
+                    <span class="badge">Self-Hosted</span>
+                    <span class="badge">Open Source</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-bar__content">
+                <span class="trust-bar__label">Compliance Frameworks</span>
+                <div class="trust-bar__items">
+                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> EU AI Act</div>
+                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> GDPR</div>
+                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> NIS2</div>
+                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> ISO 42001</div>
+                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Apache 2.0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section id="problem" class="problem">
+        <div class="container">
+            <div class="problem__grid">
+                <div class="problem__text">
+                    <span class="section__label">The Governance Gap</span>
+                    <h2 class="section__title">Your AI Agents Are Live.<br>Who's Governing Them?</h2>
+                    <div class="problem__points">
+                        <div class="problem__point"><span class="problem__x">&times;</span><p><strong>AI vendors</strong> focus on model performance — not governance</p></div>
+                        <div class="problem__point"><span class="problem__x">&times;</span><p><strong>Observability platforms</strong> track what happened — not whether it was allowed</p></div>
+                        <div class="problem__point"><span class="problem__x">&times;</span><p><strong>Cloud providers</strong> bundle governance with vendor lock-in</p></div>
+                        <div class="problem__point"><span class="problem__x">&times;</span><p><strong>Open-source guardrails</strong> handle injection — but miss audit, compliance, and identity</p></div>
+                    </div>
+                </div>
+                <div class="problem__stats">
+                    <div class="problem__stat">
+                        <div class="problem__stat-number">&euro;35M+</div>
+                        <div class="problem__stat-label">Maximum EU AI Act penalty</div>
+                    </div>
+                    <div class="problem__stat">
+                        <div class="problem__stat-number">Aug 2026</div>
+                        <div class="problem__stat-label">EU AI Act enforcement deadline</div>
+                    </div>
+                    <div class="problem__stat">
+                        <div class="problem__stat-number">0</div>
+                        <div class="problem__stat-label">Governance platforms with built-in EU compliance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section id="product" class="product">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">Introducing Sentinel Agent</span>
+                <h2 class="section__title">The Control Plane Between<br>Your AI Agents and the Real World</h2>
+                <p class="section__subtitle">Self-hosted enterprise platform that governs every AI agent action through deterministic policy enforcement, human-approval workflows, and immutable audit trails.</p>
+            </div>
+            <div class="product__grid">
+                <div class="product__card">
+                    <div class="product__card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+                    <h3>Governance by Architecture</h3>
+                    <p>SHIELD policy engine enforces decisions <strong>before</strong> execution — not retrospectively. Deny-by-default. Declarative. Auditable.</p>
+                </div>
+                <div class="product__card">
+                    <div class="product__card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                    <h3>Compliance Evidence Automated</h3>
+                    <p>AI Act risk classification, GDPR data subject rights, NIS2 incident reporting — evidence artifacts generated from operations, not paperwork.</p>
+                </div>
+                <div class="product__card">
+                    <div class="product__card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+                    <h3>Self-Hosted, Fully Owned</h3>
+                    <p>Zero cloud dependency. Air-gapped support via Ollama. Your data never leaves your infrastructure. Deploy on Docker, Kubernetes, or bare metal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label section__label--jp">&#27231;&#33021; &middot; Core Capabilities</span>
+                <h2 class="section__title">Everything You Need to Govern<br>AI Agents at Enterprise Scale</h2>
+            </div>
+            <div class="features__grid">
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>SHIELD Policy Engine</h3><p class="feature-card__subtitle">Deny-by-default governance</p><p>Declarative YAML policies with typed effects: <code>allow</code>, <code>deny</code>, <code>require_approval</code>, <code>allow_with_redaction</code>. Every agent action evaluated before execution.</p><span class="feature-card__benefit">Deterministic decisions, not probabilistic monitoring</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div><h3>Immutable Audit Trail</h3><p class="feature-card__subtitle">Ed25519 signed evidence chains</p><p>Append-only audit log with optional cryptographic hash-chain signing. Tamper-evident records for regulatory proof and forensic analysis.</p><span class="feature-card__benefit">Answer "who approved what, when?" in seconds</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Human Approval Workflows</h3><p class="feature-card__subtitle">Oversight where it matters</p><p>Configurable approval gating for high-risk operations. Identity-bound decisions with OIDC/SAML SSO. Bulk actions via admin console.</p><span class="feature-card__benefit">High-value decisions always require human sign-off</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Enterprise Identity &amp; Access</h3><p class="feature-card__subtitle">OIDC + SAML + SCIM + RBAC</p><p>Full SSO with OIDC (PKCE) and SAML 2.0. SCIM v2 provisioning for automated joiners/movers/leavers. Role-based access control with per-tenant isolation.</p><span class="feature-card__benefit">Employees offboarded? Sessions revoked instantly.</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 0 1 0 4h-.09c-.658.003-1.25.396-1.51 1z"/></svg></div><h3>Skill Governance Lifecycle</h3><p class="feature-card__subtitle">Draft &rarr; Approve &rarr; Sign &rarr; Publish &rarr; Monitor</p><p>YAML-based skill definitions with Ed25519 signing. Supply-chain integrity verification. A/B testing, metrics tracking, and LLM usage budgets.</p><span class="feature-card__benefit">No agent skill runs without review and signing</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h3>Distributed Kill Switch</h3><p class="feature-card__subtitle">Immediate emergency halt</p><p>Durable kill switch that halts all agent execution across replicas within seconds. Persists across restarts. Because "undo" doesn't exist for sent emails.</p><span class="feature-card__benefit">One click to stop everything. Instantly.</span></div>
+            </div>
+            <!-- Security Hardening Strip -->
+            <div class="features__security">
+                <h3>Defense-in-Depth Security</h3>
+                <div class="security-strip">
+                    <span class="security-strip__item">Prompt Injection Detection (13-pattern heuristic fusion)</span>
+                    <span class="security-strip__item">PII Scanner (15+ regex patterns)</span>
+                    <span class="security-strip__item">AES-256-GCM Encrypted Memory Store</span>
+                    <span class="security-strip__item">Deno Sandbox (restricted permissions)</span>
+                    <span class="security-strip__item">CSRF Enforcement on Mutations</span>
+                    <span class="security-strip__item">Token-Bucket Rate Limiting</span>
+                    <span class="security-strip__item">Request Body Guard (configurable max size)</span>
+                    <span class="security-strip__item">Secret Validator (fail-fast on placeholders)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <div class="section__header section__header--light">
+                <span class="section__label section__label--light">Architecture</span>
+                <h2 class="section__title section__title--light">Security-First Architecture.<br>Self-Hosted on Your Infrastructure.</h2>
+            </div>
+            <div class="architecture__diagram">
+<pre class="architecture__code"><span class="arch-comment">// Your Infrastructure</span>
+
+<span class="arch-agent">AI Agents</span>            <span class="arch-highlight">Sentinel Gateway</span>
+<span class="arch-muted">Claude, GPT,</span>    &rarr;   <span class="arch-keyword">SHIELD</span> Policy Engine
+<span class="arch-muted">Ollama</span>              <span class="arch-keyword">Audit</span> Trail (Ed25519)
+                    <span class="arch-keyword">Identity</span> (OIDC / SAML)
+<span class="arch-agent">Enterprise</span>          <span class="arch-keyword">Skill</span> Engine + Signing
+<span class="arch-muted">SAP, M365,</span>    &rarr;   <span class="arch-keyword">Kill</span> Switch (distributed)
+<span class="arch-muted">Jira</span>                <span class="arch-keyword">Compliance</span> (AI Act / GDPR / NIS2)
+
+<span class="arch-muted">Storage: SQLite (single) | PostgreSQL (multi-tenant)</span>
+<span class="arch-muted">Deploy:  Docker | K3s / Kubernetes | Ansible / VM</span></pre>
+            </div>
+            <div class="architecture__deploy">
+                <div class="deploy-card"><h4>Docker Compose</h4><p>Single command startup. 6 profiles: dev, TLS, multi-tenant, observability, demo, local-LLM.</p><code>docker compose up</code></div>
+                <div class="deploy-card"><h4>Kubernetes (K3s)</h4><p>HA with replicas, PDB, HPA, default-deny NetworkPolicy. Production-ready Kustomize configs.</p><code>bash scripts/deploy-k3s.sh prod-ha</code></div>
+                <div class="deploy-card"><h4>VM / Ansible</h4><p>Single-node bare metal. Systemd service management. No container runtime required.</p><code>ansible-playbook deploy.yml</code></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Section -->
+    <section id="compliance" class="compliance-section">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label section__label--jp">&#12467;&#12531;&#12503;&#12521;&#12452;&#12450;&#12531;&#12473; &middot; Compliance</span>
+                <h2 class="section__title">Built for EU Regulation.<br>Not Bolted On.</h2>
+                <p class="section__subtitle">Governance workflows and audit artifacts generated from operations. Compliance evidence automation across four frameworks.</p>
+            </div>
+            <div class="compliance__grid">
+                <div class="compliance-card">
+                    <div class="compliance-card__header"><h3>EU AI Act</h3><span class="status status--success">Implemented</span></div>
+                    <ul class="compliance-card__list">
+                        <li>Risk classification engine (Annex III mapping)</li>
+                        <li>Technical documentation per Art. 11</li>
+                        <li>Transparency disclosure headers (Art. 50)</li>
+                        <li><code>X-Sentinel-AI-Disclosure: true</code></li>
+                    </ul>
+                </div>
+                <div class="compliance-card">
+                    <div class="compliance-card__header"><h3>GDPR</h3><span class="status status--success">Implemented</span></div>
+                    <ul class="compliance-card__list">
+                        <li>Data-Subject Rights APIs (access, erasure, portability)</li>
+                        <li>Processing register pre-populated</li>
+                        <li>DPIA baseline generator with data-flow mapping</li>
+                        <li>Retention policies with legal-hold protection</li>
+                    </ul>
+                </div>
+                <div class="compliance-card">
+                    <div class="compliance-card__header"><h3>NIS2</h3><span class="status status--success">Implemented</span></div>
+                    <ul class="compliance-card__list">
+                        <li>Incident reporting with 1h/24h/72h deadline calculator</li>
+                        <li>Asset register (SBOM as machine-readable inventory)</li>
+                        <li>Supply-chain governance with vulnerability SLA</li>
+                        <li>Access control with managed secret policies</li>
+                    </ul>
+                </div>
+                <div class="compliance-card">
+                    <div class="compliance-card__header"><h3>ISO 42001</h3><span class="status status--info">Readiness Package</span></div>
+                    <ul class="compliance-card__list">
+                        <li>AI Management System readiness mapping</li>
+                        <li>Release evidence checklist</li>
+                        <li>Control register with gap analysis</li>
+                        <li>Governance loop for continuous improvement</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="compliance__api">
+                <h3>Compliance API Preview</h3>
+<pre class="code-block"><span class="code-comment"># Classify an agent under EU AI Act</span>
+<span class="code-keyword">curl</span> -X POST https://sentinel.your-domain.com/v1/compliance/ai-act/classify \
+  -H <span class="code-string">"Authorization: Bearer $TOKEN"</span> \
+  -d <span class="code-string">'{"agentId": "invoice-matcher", "purpose": "automated_invoice_processing"}'</span>
+
+<span class="code-comment"># Response</span>
+{
+  <span class="code-key">"riskLevel"</span>: <span class="code-string">"limited"</span>,
+  <span class="code-key">"transparencyObligations"</span>: [<span class="code-string">"art50_disclosure"</span>],
+  <span class="code-key">"recommendedControls"</span>: [<span class="code-string">"human_oversight"</span>, <span class="code-string">"audit_logging"</span>]
+}</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">Engagement Models</span>
+                <h2 class="section__title">Flexible Licensing.<br>No Per-Token Surprises.</h2>
+                <p class="section__subtitle">Predictable annual licensing tailored to your scale. No consumption billing. No cloud vendor lock-in. Pricing depends on your deployment size and support needs.</p>
+            </div>
+            <div class="pricing__grid">
+                <div class="pricing-card">
+                    <div class="pricing-card__header"><h3>Starter</h3><div class="pricing-card__price">Single-Tenant</div></div>
+                    <ul class="pricing-card__features">
+                        <li>1 production environment</li>
+                        <li>Up to 10 governed agents</li>
+                        <li>SQLite or PostgreSQL</li>
+                        <li>Standard support (next business day)</li>
+                        <li>Core compliance modules</li>
+                        <li>99.5% SLA</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--outline btn--full-width">Request a Quote</a>
+                </div>
+                <div class="pricing-card pricing-card--popular">
+                    <div class="pricing-card__badge">Most Popular</div>
+                    <div class="pricing-card__header"><h3>Professional</h3><div class="pricing-card__price">Multi-Tenant</div></div>
+                    <ul class="pricing-card__features">
+                        <li>3 production environments</li>
+                        <li>Unlimited governed agents</li>
+                        <li>PostgreSQL multi-tenant</li>
+                        <li>Premium support (1h Sev-1, 24/7)</li>
+                        <li>Full compliance suite</li>
+                        <li>Quarterly security reviews</li>
+                        <li>Custom adapter assistance</li>
+                        <li>99.9% SLA</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--primary btn--full-width">Contact Sales</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-card__header"><h3>Enterprise</h3><div class="pricing-card__price">Dedicated</div></div>
+                    <ul class="pricing-card__features">
+                        <li>6+ production environments</li>
+                        <li>Unlimited + HA clustering</li>
+                        <li>Dedicated PostgreSQL</li>
+                        <li>Premium+ support (30min Sev-1, 24/7)</li>
+                        <li>Full compliance + custom modules</li>
+                        <li>Dedicated Customer Success Manager</li>
+                        <li>On-site onboarding available</li>
+                        <li>99.95% SLA</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--outline btn--full-width">Contact Sales</a>
+                </div>
+            </div>
+            <!-- SLA Support Matrix -->
+            <div class="pricing__sla">
+                <h3>Support &amp; SLA Matrix</h3>
+                <div class="sla-table-wrapper">
+                    <table class="sla-table">
+                        <thead><tr><th>Severity</th><th>Standard</th><th>Premium</th><th>Premium+</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Sev-1</strong> Critical</td><td>Next business day</td><td>1h response, 24/7</td><td>30min response, 24/7</td></tr>
+                            <tr><td><strong>Sev-2</strong> High</td><td>8 business hours</td><td>4 hours</td><td>2 hours</td></tr>
+                            <tr><td><strong>Sev-3</strong> Medium</td><td>3 business days</td><td>Next business day</td><td>8 business hours</td></tr>
+                            <tr><td><strong>Sev-4</strong> Low</td><td>5 business days</td><td>2 business days</td><td>Next business day</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Pilot Callout -->
+            <div class="pricing__pilot">
+                <div class="pilot-callout">
+                    <h3>30-60 Day Pilot</h3>
+                    <p>Try Sentinel Agent on one priority workflow. Baseline KPIs measured &mdash; cycle-time reduction, approval latency, compliance evidence completion rate. <strong>Pilot investment credited toward Year 1 subscription.</strong></p>
+                    <a href="#contact" class="btn btn--primary">Start Your Pilot</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="section__header section__header--light">
+                <h2 class="section__title section__title--light">Built to Enterprise Standards</h2>
+            </div>
+            <div class="stats__grid">
+                <div class="stat-item"><div class="stat-number" data-target="597">0</div><div class="stat-label">Tests Passing, Zero Failures</div></div>
+                <div class="stat-item"><div class="stat-number" data-target="50">0</div><div class="stat-label">REST API Endpoints</div></div>
+                <div class="stat-item"><div class="stat-number" data-target="46">0</div><div class="stat-label">Thousand Lines of TypeScript</div></div>
+                <div class="stat-item"><div class="stat-number" data-target="14">0</div><div class="stat-label">PostgreSQL RLS-Isolated Tables</div></div>
+            </div>
+            <div class="stats__badges">
+                <span class="stats__badge">6-Job CI/CD Pipeline</span>
+                <span class="stats__badge">18 Architecture Decision Records</span>
+                <span class="stats__badge">Ed25519 Signed Audit</span>
+                <span class="stats__badge">WCAG 2.1 AA Accessible</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations Section -->
+    <section class="integrations">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">Integrations</span>
+                <h2 class="section__title">Connect to Your Enterprise Systems</h2>
+            </div>
+            <div class="integrations__grid">
+                <div class="integration-card"><div class="integration-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><h4>IMAP Email</h4><p>Triage, categorize, draft responses with approval gates</p></div>
+                <div class="integration-card"><div class="integration-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h4>Microsoft 365</h4><p>Mail, calendar, files via Graph API with policy enforcement</p></div>
+                <div class="integration-card"><div class="integration-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h4>Jira / Confluence</h4><p>Read/write with mutation audit trails</p></div>
+                <div class="integration-card"><div class="integration-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div><h4>SAP OData</h4><p>Approval-gated transactions for high-value operations</p></div>
+                <div class="integration-card"><div class="integration-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h4>Custom Adapters</h4><p>Build your own with the MCP Adapter SDK</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">FAQ</span>
+                <h2 class="section__title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq__list">
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>What makes Sentinel Agent different from LangSmith or LangFuse?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>LangSmith and LangFuse are observability platforms — they show you what happened. Sentinel Agent is a governance control plane — it enforces what's allowed to happen. SHIELD policies evaluate every action before execution, not after. Our immutable Ed25519 audit trail proves tamper evidence. And our compliance modules automate EU AI Act, GDPR, and NIS2 evidence — something no observability platform offers.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>Can I run Sentinel Agent completely air-gapped?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>Yes. Sentinel Agent supports Ollama for local LLM inference with zero external API calls. Combined with Docker or VM deployment, you can run the entire platform on-premises with no internet connectivity required.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>What LLMs does Sentinel Agent support?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>Anthropic Claude, any OpenAI-compatible API, and Ollama for local/air-gapped deployments. The platform is LLM-agnostic — you bring your own models, we govern them.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>Is this really open source?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>Yes. The full 46,000+ LOC TypeScript codebase is available under Apache 2.0. All security controls, compliance modules, deployment configs, and tests are included. Commercial support, SLAs, and managed services are available through FRECH & WUEST GmbH.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>How long does deployment take?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>Docker Compose: under 5 minutes. Kubernetes (K3s): under 30 minutes with our production configs. VM deployment: under 1 hour with Ansible playbook. A typical pilot is operational within 1-2 weeks including configuration and integration.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>We're an EU company. Is data residency guaranteed?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>Sentinel Agent is self-hosted. Your data lives on your infrastructure, in your data center, in your jurisdiction. There is zero cloud dependency and no data ever leaves your control.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>What about the August 2026 EU AI Act deadline?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>Sentinel Agent includes AI Act risk classification (Annex III), technical documentation support (Art. 11), and transparency disclosure headers (Art. 50). Our compliance module generates the evidence artifacts regulators expect. Starting a pilot now gives you a proven governance framework well before the deadline.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">Why Sentinel Agent</span>
+                <h2 class="section__title">How We Compare</h2>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead><tr><th>Capability</th><th class="comparison-table__highlight">Sentinel Agent</th><th>LangSmith / LangFuse</th><th>AWS Bedrock Guardrails</th><th>Guardrails AI</th><th>DIY</th></tr></thead>
+                    <tbody>
+                        <tr><td>Pre-execution policy enforcement</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>Partial</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>Immutable audit trail (Ed25519)</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>EU AI Act compliance module</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>GDPR data-subject rights APIs</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>Self-hosted / air-gapped</td><td class="comparison-table__highlight">&check;</td><td>Cloud only</td><td>AWS only</td><td>&check;</td><td>&check;</td></tr>
+                        <tr><td>Human approval workflows</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>OIDC + SAML + SCIM</td><td class="comparison-table__highlight">&check;</td><td>SAML</td><td>IAM</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>Kill switch (distributed)</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
+                        <tr><td>Prompt injection detection</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&check;</td><td>&check;</td><td>Build it</td></tr>
+                        <tr><td>Time to production</td><td class="comparison-table__highlight">2 weeks</td><td>1 day</td><td>1 day</td><td>1 week</td><td>18+ months</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta__content">
+                <h2 class="cta__title">Ready to Govern Your AI Agents?</h2>
+                <p class="cta__subtitle">Start a 30-60 day pilot. Measure the difference. Up to 50% credited toward your first year.</p>
+                <form class="cta__form" id="contactForm" action="send-mail.php" method="POST">
+                    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="product" value="sentinel-agent">
+                    <div class="cta__form-grid">
+                        <div class="form-group"><label for="name" class="form-label">Name *</label><input type="text" id="name" name="name" class="form-control" required></div>
+                        <div class="form-group"><label for="email" class="form-label">Business Email *</label><input type="email" id="email" name="email" class="form-control" required></div>
+                        <div class="form-group"><label for="company" class="form-label">Company *</label><input type="text" id="company" name="company" class="form-control" required></div>
+                        <div class="form-group"><label for="agents" class="form-label">AI Agents in Production</label><select id="agents" name="agents" class="form-control"><option value="">Select range</option><option value="1-5">1-5 agents</option><option value="5-20">5-20 agents</option><option value="20-50">20-50 agents</option><option value="50+">50+ agents</option></select></div>
+                        <div class="form-group"><label for="usecase" class="form-label">Primary Use Case</label><select id="usecase" name="usecase" class="form-control"><option value="">Select industry</option><option value="manufacturing">Manufacturing / SAP</option><option value="financial">Financial Services</option><option value="healthcare">Healthcare</option><option value="insurance">Insurance</option><option value="government">Government / Public Sector</option><option value="other">Other</option></select></div>
+                        <div class="form-group form-group--full"><label for="message" class="form-label">Message (optional)</label><textarea id="message" name="message" class="form-control" rows="4"></textarea></div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--lg">Request a Pilot</button>
+                </form>
+                <p class="cta__email">Or email us directly: <a href="mailto:info@frechundwuest.de">info@frechundwuest.de</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__logo">ROTOMI</div>
+                    <p class="footer__tagline">Precision in Motion, Intelligence in Action.</p>
+                    <p class="footer__company">by FRECH & WUEST GmbH</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section"><h4>Products</h4><ul><li><a href="sentinel-agent.html">Sentinel Agent</a></li><li><a href="aria-robotics.html">ARIA Robotics</a></li><li><a href="agent-company.html">Agent Company</a></li></ul></div>
+                    <div class="footer__section"><h4>Open Source</h4><ul><li><a href="https://github.com/rockywuest/sentinel_agent" target="_blank" rel="noopener">Sentinel Agent on GitHub</a></li><li><a href="https://github.com/rockywuest/aria-robotics" target="_blank" rel="noopener">ARIA Robotics on GitHub</a></li><li><a href="https://github.com/rockywuest/agent_company" target="_blank" rel="noopener">Agent Company on GitHub</a></li></ul></div>
+                    <div class="footer__section"><h4>Company</h4><ul><li><a href="index.html#about">About ROTOMI</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+                </div>
+            </div>
+            <div class="footer__bottom"><p>&copy; 2026 FRECH & WUEST GmbH. All rights reserved. ROTOMI is a trademark of FRECH & WUEST GmbH.</p></div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

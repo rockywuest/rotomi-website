@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROTOMI | Sentinel Agent — Enterprise AI Agent Governance Platform</title>
-    <meta name="description" content="Self-hosted AI agent governance platform with EU AI Act compliance, GDPR data governance, and deterministic policy enforcement. Built by FRECH & WUEST GmbH.">
-    <meta name="keywords" content="AI governance, AI agent platform, EU AI Act, GDPR compliance, NIS2, self-hosted AI, enterprise AI security, agent governance, SHIELD policy engine">
-    <meta property="og:title" content="ROTOMI Sentinel Agent — Enterprise AI Agent Governance">
-    <meta property="og:description" content="The only self-hosted AI agent platform where compliance is architecture, not afterthought. EU AI Act ready.">
+    <title>ROTOMI | Intelligent Systems for the Autonomous Enterprise</title>
+    <meta name="description" content="ROTOMI builds enterprise-grade AI platforms for governance, robotics, and multi-agent orchestration. European-engineered. Open source. By FRECH & WUEST GmbH.">
+    <meta name="keywords" content="ROTOMI, AI governance, robotics middleware, multi-agent orchestration, EU AI Act, FRECH WUEST, enterprise AI, open source">
+    <meta property="og:title" content="ROTOMI — Precision in Motion, Intelligence in Action">
+    <meta property="og:description" content="Enterprise-grade AI platforms for governance, robotics, and multi-agent orchestration. European-engineered. Open source.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rotomi.de">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ROTOMI Sentinel Agent">
-    <meta name="twitter:description" content="Enterprise AI Agent Governance. Self-Hosted. EU AI Act Ready.">
+    <meta name="twitter:title" content="ROTOMI">
+    <meta name="twitter:description" content="Intelligent Systems for the Autonomous Enterprise.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,43 +20,607 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Sentinel Agent",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Linux, Docker, Kubernetes",
-      "offers": {
-        "@type": "AggregateOffer",
-        "lowPrice": "44000",
-        "highPrice": "295000",
-        "priceCurrency": "EUR",
-        "offerCount": "3"
-      },
-      "creator": {
+      "@type": "Organization",
+      "name": "ROTOMI",
+      "url": "https://rotomi.de",
+      "description": "Enterprise-grade AI platforms for governance, robotics, and multi-agent orchestration.",
+      "parentOrganization": {
         "@type": "Organization",
         "name": "FRECH & WUEST GmbH",
-        "url": "https://rotomi.de"
-      },
-      "description": "Self-hosted enterprise AI agent governance platform with EU AI Act compliance, GDPR data governance, and deterministic SHIELD policy enforcement."
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hamburg",
+          "addressCountry": "DE"
+        }
+      }
     }
     </script>
+    <style>
+        /* ============================================
+           BRAND HOMEPAGE — Page-specific styles
+           ============================================ */
+
+        /* Hero: Brand-level presentation */
+        .brand-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding-top: 80px;
+            background: var(--color-background);
+        }
+
+        .brand-hero__grid-bg {
+            position: absolute;
+            inset: 0;
+            opacity: 0.035;
+            background-image:
+                linear-gradient(var(--rotomi-blue) 1px, transparent 1px),
+                linear-gradient(90deg, var(--rotomi-blue) 1px, transparent 1px);
+            background-size: 80px 80px;
+            mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, black 20%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, black 20%, transparent 70%);
+        }
+
+        [data-theme="dark"] .brand-hero__grid-bg {
+            opacity: 0.06;
+            background-image:
+                linear-gradient(var(--innovation-cyan) 1px, transparent 1px),
+                linear-gradient(90deg, var(--innovation-cyan) 1px, transparent 1px);
+        }
+
+        .brand-hero__accent {
+            position: absolute;
+            top: 15%;
+            right: 8%;
+            font-family: var(--font-secondary);
+            font-size: clamp(6rem, 18vw, 16rem);
+            font-weight: 300;
+            color: var(--rotomi-blue);
+            opacity: 0.03;
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+            writing-mode: vertical-rl;
+        }
+
+        [data-theme="dark"] .brand-hero__accent {
+            color: var(--innovation-cyan);
+            opacity: 0.04;
+        }
+
+        .brand-hero__inner {
+            position: relative;
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 var(--space-20);
+        }
+
+        .brand-hero__marker {
+            display: inline-block;
+            font-family: var(--font-family-mono);
+            font-size: var(--font-size-xs);
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--innovation-cyan);
+            margin-bottom: var(--space-24);
+            position: relative;
+            padding: 0 var(--space-20);
+        }
+
+        .brand-hero__marker::before,
+        .brand-hero__marker::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 32px;
+            height: 1px;
+            background: var(--innovation-cyan);
+            opacity: 0.4;
+        }
+
+        .brand-hero__marker::before { right: 100%; }
+        .brand-hero__marker::after { left: 100%; }
+
+        .brand-hero__name {
+            font-family: var(--font-primary);
+            font-size: clamp(3.5rem, 10vw, 7rem);
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            line-height: 0.9;
+            color: var(--color-text);
+            margin-bottom: var(--space-12);
+        }
+
+        .brand-hero__jp {
+            font-family: var(--font-secondary);
+            font-size: clamp(1rem, 2.5vw, 1.35rem);
+            font-weight: 300;
+            color: var(--color-text-secondary);
+            letter-spacing: 0.35em;
+            margin-bottom: var(--space-32);
+            opacity: 0.7;
+        }
+
+        .brand-hero__rule {
+            width: 48px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--rotomi-blue), var(--innovation-cyan));
+            margin: 0 auto var(--space-32);
+            border: none;
+        }
+
+        .brand-hero__tagline {
+            font-family: var(--font-primary);
+            font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+            font-weight: 500;
+            color: var(--color-text);
+            line-height: 1.35;
+            margin-bottom: var(--space-16);
+        }
+
+        .brand-hero__desc {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+            max-width: 560px;
+            margin: 0 auto var(--space-32);
+        }
+
+        .brand-hero__actions {
+            display: flex;
+            gap: var(--space-12);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Products Showcase */
+        .showcase {
+            padding: 120px 0;
+            background: var(--color-surface);
+        }
+
+        .showcase__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-24);
+        }
+
+        .showcase-card {
+            background: var(--color-background);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 0;
+            overflow: hidden;
+            transition: all 0.35s var(--ease-out-quart);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -12px rgba(30, 58, 138, 0.08);
+        }
+
+        [data-theme="dark"] .showcase-card:hover {
+            box-shadow: 0 20px 40px -12px rgba(6, 182, 212, 0.1);
+        }
+
+        .showcase-card__top {
+            padding: 36px var(--space-32) var(--space-24);
+            border-bottom: 1px solid var(--color-border);
+            position: relative;
+        }
+
+        .showcase-card__top::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--rotomi-blue), var(--innovation-cyan));
+            transition: width 0.5s var(--ease-out-quart);
+        }
+
+        .showcase-card:hover .showcase-card__top::after {
+            width: 100%;
+        }
+
+        .showcase-card__number {
+            font-family: var(--font-family-mono);
+            font-size: var(--font-size-xs);
+            color: var(--innovation-cyan);
+            letter-spacing: 0.06em;
+            margin-bottom: var(--space-16);
+            opacity: 0.8;
+        }
+
+        .showcase-card__title {
+            font-family: var(--font-primary);
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            margin-bottom: var(--space-6);
+            line-height: 1.2;
+        }
+
+        .showcase-card__subtitle {
+            font-family: var(--font-family-mono);
+            font-size: var(--font-size-xs);
+            color: var(--color-text-secondary);
+            letter-spacing: 0.02em;
+        }
+
+        .showcase-card__body {
+            padding: var(--space-24) var(--space-32);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .showcase-card__desc {
+            font-size: var(--font-size-base);
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--space-20);
+            flex: 1;
+        }
+
+        .showcase-card__tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-6);
+            margin-bottom: var(--space-20);
+        }
+
+        .showcase-card__tag {
+            display: inline-flex;
+            padding: var(--space-2) var(--space-8);
+            background: rgba(30, 58, 138, 0.05);
+            border: 1px solid rgba(30, 58, 138, 0.1);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-family-mono);
+            font-size: 10px;
+            color: var(--tech-gray);
+            letter-spacing: 0.02em;
+        }
+
+        [data-theme="dark"] .showcase-card__tag {
+            background: rgba(6, 182, 212, 0.06);
+            border-color: rgba(6, 182, 212, 0.15);
+            color: #94A3B8;
+        }
+
+        .showcase-card__link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-6);
+            font-family: var(--font-primary);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: gap 0.25s var(--ease-out-quart);
+        }
+
+        .showcase-card__link:hover {
+            gap: var(--space-10);
+        }
+
+        .showcase-card__link svg {
+            transition: transform 0.25s var(--ease-out-quart);
+        }
+
+        .showcase-card__link:hover svg {
+            transform: translateX(2px);
+        }
+
+        /* About / Values */
+        .about {
+            padding: 120px 0;
+            background: var(--color-background);
+        }
+
+        .about__layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .about__text .section__label {
+            text-align: left;
+            display: block;
+        }
+
+        .about__text .section__title {
+            text-align: left;
+        }
+
+        .about__mission {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-secondary);
+            line-height: 1.75;
+            margin-bottom: var(--space-24);
+        }
+
+        .about__company {
+            font-family: var(--font-family-mono);
+            font-size: var(--font-size-xs);
+            color: var(--color-text-secondary);
+            letter-spacing: 0.02em;
+            padding-top: var(--space-16);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .about__company strong {
+            color: var(--color-text);
+        }
+
+        .values-grid {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-16);
+        }
+
+        .value-row {
+            display: flex;
+            align-items: center;
+            gap: var(--space-20);
+            padding: var(--space-20) var(--space-24);
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            transition: all var(--duration-normal) var(--ease-standard);
+        }
+
+        .value-row:hover {
+            border-color: rgba(6, 182, 212, 0.25);
+            transform: translateX(4px);
+        }
+
+        .value-row__kanji {
+            font-family: var(--font-secondary);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 400;
+            color: var(--rotomi-blue);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 56px;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .value-row__kanji {
+            color: var(--innovation-cyan);
+        }
+
+        .value-row__content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .value-row__name {
+            font-family: var(--font-primary);
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 2px;
+        }
+
+        .value-row__name span {
+            font-weight: 400;
+            color: var(--color-text-secondary);
+            margin-left: var(--space-4);
+            font-size: var(--font-size-sm);
+        }
+
+        .value-row__desc {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 120px 0;
+            background: var(--color-surface);
+        }
+
+        .contact__layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .contact__info .section__label {
+            text-align: left;
+            display: block;
+        }
+
+        .contact__info .section__title {
+            text-align: left;
+        }
+
+        .contact__text {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--space-32);
+        }
+
+        .contact__detail {
+            display: flex;
+            align-items: center;
+            gap: var(--space-12);
+            padding: var(--space-12) 0;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .contact__detail:last-child {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .contact__detail-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: rgba(30, 58, 138, 0.05);
+            border-radius: var(--radius-base);
+            color: var(--rotomi-blue);
+            flex-shrink: 0;
+        }
+
+        [data-theme="dark"] .contact__detail-icon {
+            background: rgba(6, 182, 212, 0.08);
+            color: var(--innovation-cyan);
+        }
+
+        .contact__detail-text {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+        }
+
+        .contact__detail-text strong {
+            display: block;
+            color: var(--color-text);
+            font-weight: 500;
+            margin-bottom: 1px;
+        }
+
+        .contact__form-card {
+            background: var(--color-background);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-32);
+        }
+
+        [data-theme="dark"] .contact__form-card {
+            background: #1E293B;
+        }
+
+        .contact__form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-16);
+        }
+
+        .contact__form-grid .form-group--full {
+            grid-column: 1 / -1;
+        }
+
+        .contact__form-card .btn {
+            margin-top: var(--space-8);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .showcase__grid {
+                grid-template-columns: 1fr;
+                max-width: 520px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about__layout {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .contact__layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .brand-hero__accent {
+                display: none;
+            }
+
+            .brand-hero__name {
+                font-size: clamp(2.8rem, 12vw, 4.5rem);
+            }
+
+            .brand-hero__actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .brand-hero__actions .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .showcase,
+            .about,
+            .contact {
+                padding: 72px 0;
+            }
+
+            .contact__form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-hero__marker::before,
+            .brand-hero__marker::after {
+                display: none;
+            }
+
+            .value-row__kanji {
+                width: 40px;
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Entry animations */
+        .brand-hero__inner > * {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: brandFadeIn 0.6s var(--ease-out-quart) forwards;
+        }
+
+        .brand-hero__inner > *:nth-child(1) { animation-delay: 0.1s; }
+        .brand-hero__inner > *:nth-child(2) { animation-delay: 0.2s; }
+        .brand-hero__inner > *:nth-child(3) { animation-delay: 0.3s; }
+        .brand-hero__inner > *:nth-child(4) { animation-delay: 0.4s; }
+        .brand-hero__inner > *:nth-child(5) { animation-delay: 0.45s; }
+        .brand-hero__inner > *:nth-child(6) { animation-delay: 0.5s; }
+        .brand-hero__inner > *:nth-child(7) { animation-delay: 0.55s; }
+
+        @keyframes brandFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav" role="navigation" aria-label="Main navigation">
         <div class="nav__container">
-            <a href="#hero" class="nav__brand">
+            <a href="index.html" class="nav__brand">
                 <span class="nav__logo">ROTOMI</span>
             </a>
             <button class="nav__hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
             <div class="nav__menu" id="navMenu">
-                <a href="#product" class="nav__link">Product</a>
-                <a href="#features" class="nav__link">Features</a>
-                <a href="#compliance" class="nav__link">Compliance</a>
-                <a href="#pricing" class="nav__link">Pricing</a>
+                <a href="#products" class="nav__link">Products</a>
+                <a href="#about" class="nav__link">About</a>
                 <a href="#contact" class="nav__link">Contact</a>
-                <a href="#contact" class="btn btn--primary btn--sm nav__cta">Request Pilot</a>
+                <a href="#contact" class="btn btn--primary btn--sm nav__cta">Get in Touch</a>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
                     <svg class="theme-toggle__icon theme-toggle__icon--light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                     <svg class="theme-toggle__icon theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -65,444 +629,230 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero__background"></div>
-        <div class="container">
-            <div class="hero__content">
-                <div class="hero__logo">
-                    <h1 class="hero__title">Sentinel Agent</h1>
-                    <div class="hero__brand">by <span class="hero__brand-name">ROTOMI</span></div>
-                </div>
-                <p class="hero__tagline">Enterprise AI Agent Governance.<br>Self-Hosted. EU AI Act Ready.</p>
-                <p class="hero__description">The only AI agent platform where compliance, security, and human oversight are architecture — not afterthoughts.</p>
-                <div class="hero__actions">
-                    <a href="#contact" class="btn btn--primary btn--lg">Request a Pilot</a>
-                    <a href="#features" class="btn btn--outline btn--lg">Explore Features</a>
-                </div>
-                <div class="hero__badges">
-                    <span class="badge">EU AI Act</span>
-                    <span class="badge">GDPR</span>
-                    <span class="badge">NIS2</span>
-                    <span class="badge">ISO 42001</span>
-                    <span class="badge">Self-Hosted</span>
-                    <span class="badge">Open Source</span>
-                </div>
+    <!-- Hero -->
+    <section class="brand-hero">
+        <div class="brand-hero__grid-bg"></div>
+        <div class="brand-hero__accent" aria-hidden="true">&#12525;&#12488;&#12511;</div>
+        <div class="brand-hero__inner">
+            <div class="brand-hero__marker">Est. Hamburg, Germany</div>
+            <h1 class="brand-hero__name">ROTOMI</h1>
+            <div class="brand-hero__jp">&#12525;&#12488;&#12511;</div>
+            <hr class="brand-hero__rule">
+            <p class="brand-hero__tagline">Precision in Motion, Intelligence in Action.</p>
+            <p class="brand-hero__desc">We build enterprise-grade AI platforms for governance, robotics, and multi-agent orchestration. European-engineered. Open source.</p>
+            <div class="brand-hero__actions">
+                <a href="#products" class="btn btn--primary btn--lg">Explore Products</a>
+                <a href="#contact" class="btn btn--outline btn--lg">Contact Us</a>
             </div>
         </div>
     </section>
 
-    <!-- Trust Bar -->
-    <section class="trust-bar">
+    <!-- Products -->
+    <section id="products" class="showcase">
         <div class="container">
-            <div class="trust-bar__content">
-                <span class="trust-bar__label">Compliance Frameworks</span>
-                <div class="trust-bar__items">
-                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> EU AI Act</div>
-                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> GDPR</div>
-                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> NIS2</div>
-                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> ISO 42001</div>
-                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Apache 2.0</div>
-                </div>
+            <div class="section__header">
+                <span class="section__label section__label--jp">&#35069;&#21697; &middot; Products</span>
+                <h2 class="section__title">Three Platforms. One Vision.</h2>
+                <p class="section__subtitle">From AI agent governance to autonomous robotics to multi-agent orchestration &mdash; ROTOMI platforms share a commitment to safety, compliance, and open-source transparency.</p>
+            </div>
+            <div class="showcase__grid">
+                <!-- Sentinel Agent -->
+                <article class="showcase-card">
+                    <div class="showcase-card__top">
+                        <div class="showcase-card__number">01</div>
+                        <h3 class="showcase-card__title">Sentinel Agent</h3>
+                        <div class="showcase-card__subtitle">AI Agent Governance Platform</div>
+                    </div>
+                    <div class="showcase-card__body">
+                        <p class="showcase-card__desc">The control plane between your AI agents and the real world. Self-hosted enterprise platform with deterministic policy enforcement, human-approval workflows, and immutable audit trails. EU AI Act ready.</p>
+                        <div class="showcase-card__tags">
+                            <span class="showcase-card__tag">SHIELD Policy Engine</span>
+                            <span class="showcase-card__tag">EU AI Act</span>
+                            <span class="showcase-card__tag">GDPR</span>
+                            <span class="showcase-card__tag">Ed25519 Audit</span>
+                            <span class="showcase-card__tag">Self-Hosted</span>
+                            <span class="showcase-card__tag">597 Tests</span>
+                        </div>
+                        <a href="sentinel-agent.html" class="showcase-card__link">
+                            Learn more
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ARIA Robotics -->
+                <article class="showcase-card">
+                    <div class="showcase-card__top">
+                        <div class="showcase-card__number">02</div>
+                        <h3 class="showcase-card__title">ARIA Robotics</h3>
+                        <div class="showcase-card__subtitle">Autonomous Robotics Integration Architecture</div>
+                    </div>
+                    <div class="showcase-card__body">
+                        <p class="showcase-card__desc">Natural language robot control middleware. Speak to your robots, don't program them. Safety-first architecture with emergency stop, geofencing, and real-time constraint validation. The Stripe for Robotics.</p>
+                        <div class="showcase-card__tags">
+                            <span class="showcase-card__tag">Python / FastAPI</span>
+                            <span class="showcase-card__tag">E-Stop</span>
+                            <span class="showcase-card__tag">Geofence</span>
+                            <span class="showcase-card__tag">528 Tests</span>
+                            <span class="showcase-card__tag">98% Coverage</span>
+                            <span class="showcase-card__tag">Apache 2.0</span>
+                        </div>
+                        <a href="aria-robotics.html" class="showcase-card__link">
+                            Learn more
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Agent Company -->
+                <article class="showcase-card">
+                    <div class="showcase-card__top">
+                        <div class="showcase-card__number">03</div>
+                        <h3 class="showcase-card__title">Agent Company</h3>
+                        <div class="showcase-card__subtitle">Multi-Agent Orchestration Platform</div>
+                    </div>
+                    <div class="showcase-card__body">
+                        <p class="showcase-card__desc">Mission-based workflow automation with specialized AI team templates. Deploy pre-configured agent teams for Marketing, Sales, HR, Recruiting, and Product &mdash; each with role-specific capabilities and governed collaboration.</p>
+                        <div class="showcase-card__tags">
+                            <span class="showcase-card__tag">Next.js + Supabase</span>
+                            <span class="showcase-card__tag">5 Team Templates</span>
+                            <span class="showcase-card__tag">Mission Workflows</span>
+                            <span class="showcase-card__tag">12 DB Tables</span>
+                            <span class="showcase-card__tag">RLS Isolation</span>
+                        </div>
+                        <a href="agent-company.html" class="showcase-card__link">
+                            Learn more
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Problem Statement -->
-    <section id="problem" class="problem">
+    <!-- About & Values -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="problem__grid">
-                <div class="problem__text">
-                    <span class="section__label">The Governance Gap</span>
-                    <h2 class="section__title">Your AI Agents Are Live.<br>Who's Governing Them?</h2>
-                    <div class="problem__points">
-                        <div class="problem__point"><span class="problem__x">&times;</span><p><strong>AI vendors</strong> focus on model performance — not governance</p></div>
-                        <div class="problem__point"><span class="problem__x">&times;</span><p><strong>Observability platforms</strong> track what happened — not whether it was allowed</p></div>
-                        <div class="problem__point"><span class="problem__x">&times;</span><p><strong>Cloud providers</strong> bundle governance with vendor lock-in</p></div>
-                        <div class="problem__point"><span class="problem__x">&times;</span><p><strong>Open-source guardrails</strong> handle injection — but miss audit, compliance, and identity</p></div>
+            <div class="about__layout">
+                <div class="about__text">
+                    <span class="section__label section__label--jp">&#20250;&#31038; &middot; About</span>
+                    <h2 class="section__title">European Engineering.<br>Japanese Precision.</h2>
+                    <p class="about__mission">ROTOMI builds intelligent systems that bridge the gap between human intent and machine capability. We believe AI platforms should be self-hosted, auditable, and compliant by architecture &mdash; not by afterthought.</p>
+                    <p class="about__mission">Every platform we ship is open source, rigorously tested, and designed for the regulatory reality of operating in the European Union.</p>
+                    <div class="about__company">
+                        <strong>FRECH &amp; WUEST GmbH</strong> &middot; HRB 112702, Amtsgericht Hamburg &middot; Gesch&auml;ftsf&uuml;hrer: Rocky Wuest
                     </div>
                 </div>
-                <div class="problem__stats">
-                    <div class="problem__stat">
-                        <div class="problem__stat-number">&euro;35M+</div>
-                        <div class="problem__stat-label">Maximum EU AI Act penalty</div>
+                <div class="values-grid">
+                    <div class="value-row">
+                        <div class="value-row__kanji">&#38761;&#26032;</div>
+                        <div class="value-row__content">
+                            <div class="value-row__name">Kakushin <span>Innovation</span></div>
+                            <p class="value-row__desc">Pushing boundaries in AI governance, robotics middleware, and agent orchestration.</p>
+                        </div>
                     </div>
-                    <div class="problem__stat">
-                        <div class="problem__stat-number">Aug 2026</div>
-                        <div class="problem__stat-label">EU AI Act enforcement deadline</div>
+                    <div class="value-row">
+                        <div class="value-row__kanji">&#21697;&#36074;</div>
+                        <div class="value-row__content">
+                            <div class="value-row__name">Hinshitsu <span>Quality</span></div>
+                            <p class="value-row__desc">597+ tests in Sentinel Agent. 528 in ARIA. Zero tolerance for shipping untested code.</p>
+                        </div>
                     </div>
-                    <div class="problem__stat">
-                        <div class="problem__stat-number">0</div>
-                        <div class="problem__stat-label">Governance platforms with built-in EU compliance</div>
+                    <div class="value-row">
+                        <div class="value-row__kanji">&#35519;&#21644;</div>
+                        <div class="value-row__content">
+                            <div class="value-row__name">Ch&#333;wa <span>Harmony</span></div>
+                            <p class="value-row__desc">Humans and AI agents working together through approval workflows and oversight gates.</p>
+                        </div>
+                    </div>
+                    <div class="value-row">
+                        <div class="value-row__kanji">&#31934;&#23494;</div>
+                        <div class="value-row__content">
+                            <div class="value-row__name">Seimitsu <span>Precision</span></div>
+                            <p class="value-row__desc">Deterministic policy enforcement. Ed25519 signed audit trails. No probabilistic guesswork.</p>
+                        </div>
+                    </div>
+                    <div class="value-row">
+                        <div class="value-row__kanji">&#25913;&#21892;</div>
+                        <div class="value-row__content">
+                            <div class="value-row__name">Kaizen <span>Continuous Improvement</span></div>
+                            <p class="value-row__desc">Open source by conviction. Community-driven evolution. Every commit reviewed, every release tested.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Overview -->
-    <section id="product" class="product">
+    <!-- Contact -->
+    <section id="contact" class="contact">
         <div class="container">
-            <div class="section__header">
-                <span class="section__label">Introducing Sentinel Agent</span>
-                <h2 class="section__title">The Control Plane Between<br>Your AI Agents and the Real World</h2>
-                <p class="section__subtitle">Self-hosted enterprise platform that governs every AI agent action through deterministic policy enforcement, human-approval workflows, and immutable audit trails.</p>
-            </div>
-            <div class="product__grid">
-                <div class="product__card">
-                    <div class="product__card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-                    <h3>Governance by Architecture</h3>
-                    <p>SHIELD policy engine enforces decisions <strong>before</strong> execution — not retrospectively. Deny-by-default. Declarative. Auditable.</p>
-                </div>
-                <div class="product__card">
-                    <div class="product__card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-                    <h3>Compliance Evidence Automated</h3>
-                    <p>AI Act risk classification, GDPR data subject rights, NIS2 incident reporting — evidence artifacts generated from operations, not paperwork.</p>
-                </div>
-                <div class="product__card">
-                    <div class="product__card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
-                    <h3>Self-Hosted, Fully Owned</h3>
-                    <p>Zero cloud dependency. Air-gapped support via Ollama. Your data never leaves your infrastructure. Deploy on Docker, Kubernetes, or bare metal.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section__header">
-                <span class="section__label section__label--jp">&#27231;&#33021; &middot; Core Capabilities</span>
-                <h2 class="section__title">Everything You Need to Govern<br>AI Agents at Enterprise Scale</h2>
-            </div>
-            <div class="features__grid">
-                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>SHIELD Policy Engine</h3><p class="feature-card__subtitle">Deny-by-default governance</p><p>Declarative YAML policies with typed effects: <code>allow</code>, <code>deny</code>, <code>require_approval</code>, <code>allow_with_redaction</code>. Every agent action evaluated before execution.</p><span class="feature-card__benefit">Deterministic decisions, not probabilistic monitoring</span></div>
-                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div><h3>Immutable Audit Trail</h3><p class="feature-card__subtitle">Ed25519 signed evidence chains</p><p>Append-only audit log with optional cryptographic hash-chain signing. Tamper-evident records for regulatory proof and forensic analysis.</p><span class="feature-card__benefit">Answer "who approved what, when?" in seconds</span></div>
-                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Human Approval Workflows</h3><p class="feature-card__subtitle">Oversight where it matters</p><p>Configurable approval gating for high-risk operations. Identity-bound decisions with OIDC/SAML SSO. Bulk actions via admin console.</p><span class="feature-card__benefit">High-value decisions always require human sign-off</span></div>
-                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Enterprise Identity &amp; Access</h3><p class="feature-card__subtitle">OIDC + SAML + SCIM + RBAC</p><p>Full SSO with OIDC (PKCE) and SAML 2.0. SCIM v2 provisioning for automated joiners/movers/leavers. Role-based access control with per-tenant isolation.</p><span class="feature-card__benefit">Employees offboarded? Sessions revoked instantly.</span></div>
-                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 0 1 0 4h-.09c-.658.003-1.25.396-1.51 1z"/></svg></div><h3>Skill Governance Lifecycle</h3><p class="feature-card__subtitle">Draft &rarr; Approve &rarr; Sign &rarr; Publish &rarr; Monitor</p><p>YAML-based skill definitions with Ed25519 signing. Supply-chain integrity verification. A/B testing, metrics tracking, and LLM usage budgets.</p><span class="feature-card__benefit">No agent skill runs without review and signing</span></div>
-                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h3>Distributed Kill Switch</h3><p class="feature-card__subtitle">Immediate emergency halt</p><p>Durable kill switch that halts all agent execution across replicas within seconds. Persists across restarts. Because "undo" doesn't exist for sent emails.</p><span class="feature-card__benefit">One click to stop everything. Instantly.</span></div>
-            </div>
-            <!-- Security Hardening Strip -->
-            <div class="features__security">
-                <h3>Defense-in-Depth Security</h3>
-                <div class="security-strip">
-                    <span class="security-strip__item">Prompt Injection Detection (13-pattern heuristic fusion)</span>
-                    <span class="security-strip__item">PII Scanner (15+ regex patterns)</span>
-                    <span class="security-strip__item">AES-256-GCM Encrypted Memory Store</span>
-                    <span class="security-strip__item">Deno Sandbox (restricted permissions)</span>
-                    <span class="security-strip__item">CSRF Enforcement on Mutations</span>
-                    <span class="security-strip__item">Token-Bucket Rate Limiting</span>
-                    <span class="security-strip__item">Request Body Guard (configurable max size)</span>
-                    <span class="security-strip__item">Secret Validator (fail-fast on placeholders)</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Architecture Section -->
-    <section id="architecture" class="architecture">
-        <div class="container">
-            <div class="section__header section__header--light">
-                <span class="section__label section__label--light">Architecture</span>
-                <h2 class="section__title section__title--light">Security-First Architecture.<br>Self-Hosted on Your Infrastructure.</h2>
-            </div>
-            <div class="architecture__diagram">
-<pre class="architecture__code"><span class="arch-comment">// Your Infrastructure</span>
-
-<span class="arch-agent">AI Agents</span>            <span class="arch-highlight">Sentinel Gateway</span>
-<span class="arch-muted">Claude, GPT,</span>    &rarr;   <span class="arch-keyword">SHIELD</span> Policy Engine
-<span class="arch-muted">Ollama</span>              <span class="arch-keyword">Audit</span> Trail (Ed25519)
-                    <span class="arch-keyword">Identity</span> (OIDC / SAML)
-<span class="arch-agent">Enterprise</span>          <span class="arch-keyword">Skill</span> Engine + Signing
-<span class="arch-muted">SAP, M365,</span>    &rarr;   <span class="arch-keyword">Kill</span> Switch (distributed)
-<span class="arch-muted">Jira</span>                <span class="arch-keyword">Compliance</span> (AI Act / GDPR / NIS2)
-
-<span class="arch-muted">Storage: SQLite (single) | PostgreSQL (multi-tenant)</span>
-<span class="arch-muted">Deploy:  Docker | K3s / Kubernetes | Ansible / VM</span></pre>
-            </div>
-            <div class="architecture__deploy">
-                <div class="deploy-card"><h4>Docker Compose</h4><p>Single command startup. 6 profiles: dev, TLS, multi-tenant, observability, demo, local-LLM.</p><code>docker compose up</code></div>
-                <div class="deploy-card"><h4>Kubernetes (K3s)</h4><p>HA with replicas, PDB, HPA, default-deny NetworkPolicy. Production-ready Kustomize configs.</p><code>bash scripts/deploy-k3s.sh prod-ha</code></div>
-                <div class="deploy-card"><h4>VM / Ansible</h4><p>Single-node bare metal. Systemd service management. No container runtime required.</p><code>ansible-playbook deploy.yml</code></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Compliance Section -->
-    <section id="compliance" class="compliance-section">
-        <div class="container">
-            <div class="section__header">
-                <span class="section__label section__label--jp">&#12467;&#12531;&#12503;&#12521;&#12452;&#12450;&#12531;&#12473; &middot; Compliance</span>
-                <h2 class="section__title">Built for EU Regulation.<br>Not Bolted On.</h2>
-                <p class="section__subtitle">Governance workflows and audit artifacts generated from operations. Compliance evidence automation across four frameworks.</p>
-            </div>
-            <div class="compliance__grid">
-                <div class="compliance-card">
-                    <div class="compliance-card__header"><h3>EU AI Act</h3><span class="status status--success">Implemented</span></div>
-                    <ul class="compliance-card__list">
-                        <li>Risk classification engine (Annex III mapping)</li>
-                        <li>Technical documentation per Art. 11</li>
-                        <li>Transparency disclosure headers (Art. 50)</li>
-                        <li><code>X-Sentinel-AI-Disclosure: true</code></li>
-                    </ul>
-                </div>
-                <div class="compliance-card">
-                    <div class="compliance-card__header"><h3>GDPR</h3><span class="status status--success">Implemented</span></div>
-                    <ul class="compliance-card__list">
-                        <li>Data-Subject Rights APIs (access, erasure, portability)</li>
-                        <li>Processing register pre-populated</li>
-                        <li>DPIA baseline generator with data-flow mapping</li>
-                        <li>Retention policies with legal-hold protection</li>
-                    </ul>
-                </div>
-                <div class="compliance-card">
-                    <div class="compliance-card__header"><h3>NIS2</h3><span class="status status--success">Implemented</span></div>
-                    <ul class="compliance-card__list">
-                        <li>Incident reporting with 1h/24h/72h deadline calculator</li>
-                        <li>Asset register (SBOM as machine-readable inventory)</li>
-                        <li>Supply-chain governance with vulnerability SLA</li>
-                        <li>Access control with managed secret policies</li>
-                    </ul>
-                </div>
-                <div class="compliance-card">
-                    <div class="compliance-card__header"><h3>ISO 42001</h3><span class="status status--info">Readiness Package</span></div>
-                    <ul class="compliance-card__list">
-                        <li>AI Management System readiness mapping</li>
-                        <li>Release evidence checklist</li>
-                        <li>Control register with gap analysis</li>
-                        <li>Governance loop for continuous improvement</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="compliance__api">
-                <h3>Compliance API Preview</h3>
-<pre class="code-block"><span class="code-comment"># Classify an agent under EU AI Act</span>
-<span class="code-keyword">curl</span> -X POST https://sentinel.your-domain.com/v1/compliance/ai-act/classify \
-  -H <span class="code-string">"Authorization: Bearer $TOKEN"</span> \
-  -d <span class="code-string">'{"agentId": "invoice-matcher", "purpose": "automated_invoice_processing"}'</span>
-
-<span class="code-comment"># Response</span>
-{
-  <span class="code-key">"riskLevel"</span>: <span class="code-string">"limited"</span>,
-  <span class="code-key">"transparencyObligations"</span>: [<span class="code-string">"art50_disclosure"</span>],
-  <span class="code-key">"recommendedControls"</span>: [<span class="code-string">"human_oversight"</span>, <span class="code-string">"audit_logging"</span>]
-}</pre>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section__header">
-                <span class="section__label">Pricing</span>
-                <h2 class="section__title">Transparent Pricing.<br>No Per-Token Surprises.</h2>
-                <p class="section__subtitle">Predictable annual licensing. No consumption billing. No cloud vendor lock-in.</p>
-            </div>
-            <div class="pricing__grid">
-                <div class="pricing-card">
-                    <div class="pricing-card__header"><h3>Starter</h3><div class="pricing-card__price">&euro;44,000<span>/year</span></div></div>
-                    <ul class="pricing-card__features">
-                        <li>1 production environment</li>
-                        <li>Up to 10 governed agents</li>
-                        <li>SQLite or PostgreSQL</li>
-                        <li>Standard support (next business day)</li>
-                        <li>Core compliance modules</li>
-                        <li>99.5% SLA</li>
-                    </ul>
-                    <a href="#contact" class="btn btn--outline btn--full-width">Start Pilot</a>
-                </div>
-                <div class="pricing-card pricing-card--popular">
-                    <div class="pricing-card__badge">Most Popular</div>
-                    <div class="pricing-card__header"><h3>Professional</h3><div class="pricing-card__price">&euro;135,000<span>/year</span></div></div>
-                    <ul class="pricing-card__features">
-                        <li>3 production environments</li>
-                        <li>Unlimited governed agents</li>
-                        <li>PostgreSQL multi-tenant</li>
-                        <li>Premium support (1h Sev-1, 24/7)</li>
-                        <li>Full compliance suite</li>
-                        <li>Quarterly security reviews</li>
-                        <li>Custom adapter assistance</li>
-                        <li>99.9% SLA</li>
-                    </ul>
-                    <a href="#contact" class="btn btn--primary btn--full-width">Request Demo</a>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-card__header"><h3>Enterprise</h3><div class="pricing-card__price">&euro;295,000+<span>/year</span></div></div>
-                    <ul class="pricing-card__features">
-                        <li>6+ production environments</li>
-                        <li>Unlimited + HA clustering</li>
-                        <li>Dedicated PostgreSQL</li>
-                        <li>Premium+ support (30min Sev-1, 24/7)</li>
-                        <li>Full compliance + custom modules</li>
-                        <li>Dedicated Customer Success Manager</li>
-                        <li>On-site onboarding available</li>
-                        <li>99.95% SLA</li>
-                    </ul>
-                    <a href="#contact" class="btn btn--outline btn--full-width">Contact Sales</a>
-                </div>
-            </div>
-            <!-- Add-Ons -->
-            <div class="pricing__addons">
-                <h3>Optional Add-Ons</h3>
-                <div class="addons-grid">
-                    <div class="addon-item"><span class="addon-item__name">Additional Managed Environment</span><span class="addon-item__price">&euro;16,500/year</span></div>
-                    <div class="addon-item"><span class="addon-item__name">High-Availability Operations Package</span><span class="addon-item__price">&euro;39,000/year</span></div>
-                    <div class="addon-item"><span class="addon-item__name">Compliance Evidence Package</span><span class="addon-item__price">&euro;32,000/year</span></div>
-                    <div class="addon-item"><span class="addon-item__name">Custom Adapter Implementation Sprint</span><span class="addon-item__price">&euro;28,000/sprint</span></div>
-                </div>
-            </div>
-            <!-- SLA Support Matrix -->
-            <div class="pricing__sla">
-                <h3>Support &amp; SLA Matrix</h3>
-                <div class="sla-table-wrapper">
-                    <table class="sla-table">
-                        <thead><tr><th>Severity</th><th>Standard</th><th>Premium</th><th>Premium+</th></tr></thead>
-                        <tbody>
-                            <tr><td><strong>Sev-1</strong> Critical</td><td>Next business day</td><td>1h response, 24/7</td><td>30min response, 24/7</td></tr>
-                            <tr><td><strong>Sev-2</strong> High</td><td>8 business hours</td><td>4 hours</td><td>2 hours</td></tr>
-                            <tr><td><strong>Sev-3</strong> Medium</td><td>3 business days</td><td>Next business day</td><td>8 business hours</td></tr>
-                            <tr><td><strong>Sev-4</strong> Low</td><td>5 business days</td><td>2 business days</td><td>Next business day</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="pricing__note">All prices in EUR. USD invoicing available on request. Annual billing, net 30. Initial term 12 months with annual renewal.</p>
-            </div>
-            <!-- Pilot Callout -->
-            <div class="pricing__pilot">
-                <div class="pilot-callout">
-                    <h3>30-60 Day Pilot</h3>
-                    <p>Try Sentinel Agent on one priority workflow. Baseline KPIs measured &mdash; cycle-time reduction, approval latency, compliance evidence completion rate. <strong>Up to 50% of pilot fee credited toward Year 1 subscription.</strong></p>
-                    <a href="#contact" class="btn btn--primary">Start Your Pilot</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="section__header section__header--light">
-                <h2 class="section__title section__title--light">Built to Enterprise Standards</h2>
-            </div>
-            <div class="stats__grid">
-                <div class="stat-item"><div class="stat-number" data-target="597">0</div><div class="stat-label">Tests Passing, Zero Failures</div></div>
-                <div class="stat-item"><div class="stat-number" data-target="50">0</div><div class="stat-label">REST API Endpoints</div></div>
-                <div class="stat-item"><div class="stat-number" data-target="46">0</div><div class="stat-label">Thousand Lines of TypeScript</div></div>
-                <div class="stat-item"><div class="stat-number" data-target="14">0</div><div class="stat-label">PostgreSQL RLS-Isolated Tables</div></div>
-            </div>
-            <div class="stats__badges">
-                <span class="stats__badge">6-Job CI/CD Pipeline</span>
-                <span class="stats__badge">18 Architecture Decision Records</span>
-                <span class="stats__badge">Ed25519 Signed Audit</span>
-                <span class="stats__badge">WCAG 2.1 AA Accessible</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Integrations Section -->
-    <section class="integrations">
-        <div class="container">
-            <div class="section__header">
-                <span class="section__label">Integrations</span>
-                <h2 class="section__title">Connect to Your Enterprise Systems</h2>
-            </div>
-            <div class="integrations__grid">
-                <div class="integration-card"><div class="integration-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><h4>IMAP Email</h4><p>Triage, categorize, draft responses with approval gates</p></div>
-                <div class="integration-card"><div class="integration-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h4>Microsoft 365</h4><p>Mail, calendar, files via Graph API with policy enforcement</p></div>
-                <div class="integration-card"><div class="integration-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h4>Jira / Confluence</h4><p>Read/write with mutation audit trails</p></div>
-                <div class="integration-card"><div class="integration-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div><h4>SAP OData</h4><p>Approval-gated transactions for high-value operations</p></div>
-                <div class="integration-card"><div class="integration-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h4>Custom Adapters</h4><p>Build your own with the MCP Adapter SDK</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <div class="section__header">
-                <span class="section__label">FAQ</span>
-                <h2 class="section__title">Frequently Asked Questions</h2>
-            </div>
-            <div class="faq__list">
-                <div class="faq-item">
-                    <button class="faq-item__question" aria-expanded="false"><span>What makes Sentinel Agent different from LangSmith or LangFuse?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-                    <div class="faq-item__answer"><p>LangSmith and LangFuse are observability platforms — they show you what happened. Sentinel Agent is a governance control plane — it enforces what's allowed to happen. SHIELD policies evaluate every action before execution, not after. Our immutable Ed25519 audit trail proves tamper evidence. And our compliance modules automate EU AI Act, GDPR, and NIS2 evidence — something no observability platform offers.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-item__question" aria-expanded="false"><span>Can I run Sentinel Agent completely air-gapped?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-                    <div class="faq-item__answer"><p>Yes. Sentinel Agent supports Ollama for local LLM inference with zero external API calls. Combined with Docker or VM deployment, you can run the entire platform on-premises with no internet connectivity required.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-item__question" aria-expanded="false"><span>What LLMs does Sentinel Agent support?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-                    <div class="faq-item__answer"><p>Anthropic Claude, any OpenAI-compatible API, and Ollama for local/air-gapped deployments. The platform is LLM-agnostic — you bring your own models, we govern them.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-item__question" aria-expanded="false"><span>Is this really open source?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-                    <div class="faq-item__answer"><p>Yes. The full 46,000+ LOC TypeScript codebase is available under Apache 2.0. All security controls, compliance modules, deployment configs, and tests are included. Commercial support, SLAs, and managed services are available through FRECH & WUEST GmbH.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-item__question" aria-expanded="false"><span>How long does deployment take?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-                    <div class="faq-item__answer"><p>Docker Compose: under 5 minutes. Kubernetes (K3s): under 30 minutes with our production configs. VM deployment: under 1 hour with Ansible playbook. A typical pilot is operational within 1-2 weeks including configuration and integration.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-item__question" aria-expanded="false"><span>We're an EU company. Is data residency guaranteed?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-                    <div class="faq-item__answer"><p>Sentinel Agent is self-hosted. Your data lives on your infrastructure, in your data center, in your jurisdiction. There is zero cloud dependency and no data ever leaves your control.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-item__question" aria-expanded="false"><span>What about the August 2026 EU AI Act deadline?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-                    <div class="faq-item__answer"><p>Sentinel Agent includes AI Act risk classification (Annex III), technical documentation support (Art. 11), and transparency disclosure headers (Art. 50). Our compliance module generates the evidence artifacts regulators expect. Starting a pilot now gives you a proven governance framework well before the deadline.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comparison Section -->
-    <section class="comparison">
-        <div class="container">
-            <div class="section__header">
-                <span class="section__label">Why Sentinel Agent</span>
-                <h2 class="section__title">How We Compare</h2>
-            </div>
-            <div class="comparison-table-wrapper">
-                <table class="comparison-table">
-                    <thead><tr><th>Capability</th><th class="comparison-table__highlight">Sentinel Agent</th><th>LangSmith / LangFuse</th><th>AWS Bedrock Guardrails</th><th>Guardrails AI</th><th>DIY</th></tr></thead>
-                    <tbody>
-                        <tr><td>Pre-execution policy enforcement</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>Partial</td><td>&mdash;</td><td>Build it</td></tr>
-                        <tr><td>Immutable audit trail (Ed25519)</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
-                        <tr><td>EU AI Act compliance module</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
-                        <tr><td>GDPR data-subject rights APIs</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
-                        <tr><td>Self-hosted / air-gapped</td><td class="comparison-table__highlight">&check;</td><td>Cloud only</td><td>AWS only</td><td>&check;</td><td>&check;</td></tr>
-                        <tr><td>Human approval workflows</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
-                        <tr><td>OIDC + SAML + SCIM</td><td class="comparison-table__highlight">&check;</td><td>SAML</td><td>IAM</td><td>&mdash;</td><td>Build it</td></tr>
-                        <tr><td>Kill switch (distributed)</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Build it</td></tr>
-                        <tr><td>Prompt injection detection</td><td class="comparison-table__highlight">&check;</td><td>&mdash;</td><td>&check;</td><td>&check;</td><td>Build it</td></tr>
-                        <tr><td>Time to production</td><td class="comparison-table__highlight">2 weeks</td><td>1 day</td><td>1 day</td><td>1 week</td><td>18+ months</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="contact" class="cta-section">
-        <div class="container">
-            <div class="cta__content">
-                <h2 class="cta__title">Ready to Govern Your AI Agents?</h2>
-                <p class="cta__subtitle">Start a 30-60 day pilot. Measure the difference. Up to 50% credited toward your first year.</p>
-                <form class="cta__form" id="contactForm">
-                    <div class="cta__form-grid">
-                        <div class="form-group"><label for="name" class="form-label">Name *</label><input type="text" id="name" name="name" class="form-control" required></div>
-                        <div class="form-group"><label for="email" class="form-label">Business Email *</label><input type="email" id="email" name="email" class="form-control" required></div>
-                        <div class="form-group"><label for="company" class="form-label">Company *</label><input type="text" id="company" name="company" class="form-control" required></div>
-                        <div class="form-group"><label for="agents" class="form-label">AI Agents in Production</label><select id="agents" name="agents" class="form-control"><option value="">Select range</option><option value="1-5">1-5 agents</option><option value="5-20">5-20 agents</option><option value="20-50">20-50 agents</option><option value="50+">50+ agents</option></select></div>
-                        <div class="form-group"><label for="usecase" class="form-label">Primary Use Case</label><select id="usecase" name="usecase" class="form-control"><option value="">Select industry</option><option value="manufacturing">Manufacturing / SAP</option><option value="financial">Financial Services</option><option value="healthcare">Healthcare</option><option value="insurance">Insurance</option><option value="government">Government / Public Sector</option><option value="other">Other</option></select></div>
-                        <div class="form-group form-group--full"><label for="message" class="form-label">Message (optional)</label><textarea id="message" name="message" class="form-control" rows="4"></textarea></div>
+            <div class="contact__layout">
+                <div class="contact__info">
+                    <span class="section__label">&#36899;&#32097;&#20808; &middot; Contact</span>
+                    <h2 class="section__title">Let's Build Something<br>Together.</h2>
+                    <p class="contact__text">Whether you're evaluating AI governance for your enterprise, exploring robotics integration, or planning multi-agent workflows &mdash; we'd like to hear from you.</p>
+                    <div class="contact__detail">
+                        <div class="contact__detail-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="contact__detail-text">
+                            <strong>Email</strong>
+                            <a href="mailto:info@frechundwuest.de">info@frechundwuest.de</a>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn--primary btn--lg">Request a Pilot</button>
-                </form>
-                <p class="cta__email">Or email us directly: <a href="mailto:sentinel@frechundwuest.de">sentinel@frechundwuest.de</a></p>
+                    <div class="contact__detail">
+                        <div class="contact__detail-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="contact__detail-text">
+                            <strong>Location</strong>
+                            Hamburg, Germany
+                        </div>
+                    </div>
+                    <div class="contact__detail">
+                        <div class="contact__detail-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        </div>
+                        <div class="contact__detail-text">
+                            <strong>Company</strong>
+                            FRECH &amp; WUEST GmbH &middot; HRB 112702
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__form-card">
+                    <form id="contactForm" action="send-mail.php" method="POST">
+                        <div class="contact__form-grid">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name *</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company" class="form-label">Company</label>
+                                <input type="text" id="company" name="company" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="product" class="form-label">Product Interest</label>
+                                <select id="product" name="product" class="form-control">
+                                    <option value="">Select a product</option>
+                                    <option value="sentinel-agent">Sentinel Agent</option>
+                                    <option value="aria-robotics">ARIA Robotics</option>
+                                    <option value="agent-company">Agent Company</option>
+                                    <option value="general">General Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-group--full">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--lg">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -514,15 +864,39 @@
                 <div class="footer__brand">
                     <div class="footer__logo">ROTOMI</div>
                     <p class="footer__tagline">Precision in Motion, Intelligence in Action.</p>
-                    <p class="footer__company">by FRECH & WUEST GmbH</p>
+                    <p class="footer__company">by FRECH &amp; WUEST GmbH</p>
                 </div>
                 <div class="footer__links">
-                    <div class="footer__section"><h4>Product</h4><ul><li><a href="#features">Features</a></li><li><a href="#compliance">Compliance</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#architecture">Architecture</a></li><li><a href="#faq">FAQ</a></li></ul></div>
-                    <div class="footer__section"><h4>Resources</h4><ul><li><a href="https://github.com/frechundwuest/sentinel-agent" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://github.com/frechundwuest/sentinel-agent/blob/main/docs/API.md" target="_blank" rel="noopener">API Reference</a></li><li><a href="https://github.com/frechundwuest/sentinel-agent/blob/main/docs/DEPLOYMENT.md" target="_blank" rel="noopener">Documentation</a></li></ul></div>
-                    <div class="footer__section"><h4>Company</h4><ul><li><a href="#product">About ROTOMI</a></li><li><a href="#contact">Contact</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+                    <div class="footer__section">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="sentinel-agent.html">Sentinel Agent</a></li>
+                            <li><a href="aria-robotics.html">ARIA Robotics</a></li>
+                            <li><a href="agent-company.html">Agent Company</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4>Open Source</h4>
+                        <ul>
+                            <li><a href="https://github.com/rockywuest/sentinel_agent" target="_blank" rel="noopener">Sentinel Agent on GitHub</a></li>
+                            <li><a href="https://github.com/rockywuest/aria-robotics" target="_blank" rel="noopener">ARIA Robotics on GitHub</a></li>
+                            <li><a href="https://github.com/rockywuest/agent_company" target="_blank" rel="noopener">Agent Company on GitHub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About ROTOMI</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="impressum.html">Impressum</a></li>
+                            <li><a href="datenschutz.html">Datenschutz</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="footer__bottom"><p>&copy; 2026 FRECH & WUEST GmbH. All rights reserved. ROTOMI is a trademark of FRECH & WUEST GmbH.</p></div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 FRECH &amp; WUEST GmbH. All rights reserved. ROTOMI is a trademark of FRECH &amp; WUEST GmbH.</p>
+            </div>
         </div>
     </footer>
 

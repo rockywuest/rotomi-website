@@ -46,11 +46,14 @@
             <a href="index.html" class="nav__brand">
                 <span class="nav__logo">ROTOMI</span>
             </a>
-            <div class="nav__menu">
-                <a href="index.html#product" class="nav__link">Product</a>
-                <a href="index.html#features" class="nav__link">Features</a>
-                <a href="index.html#pricing" class="nav__link">Pricing</a>
+            <button class="nav__hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav__menu" id="navMenu">
+                <a href="index.html#products" class="nav__link">Products</a>
+                <a href="index.html#about" class="nav__link">About</a>
                 <a href="index.html#contact" class="nav__link">Contact</a>
+                <a href="index.html#contact" class="btn btn--primary btn--sm nav__cta">Get in Touch</a>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
                     <svg class="theme-toggle__icon theme-toggle__icon--light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                     <svg class="theme-toggle__icon theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -128,22 +131,46 @@
 
     <footer class="footer">
         <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__logo">ROTOMI</div>
+                    <p class="footer__tagline">Precision in Motion, Intelligence in Action.</p>
+                    <p class="footer__company">by FRECH &amp; WUEST GmbH</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="sentinel-agent.html">Sentinel Agent</a></li>
+                            <li><a href="aria-robotics.html">ARIA Robotics</a></li>
+                            <li><a href="agent-company.html">Agent Company</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4>Open Source</h4>
+                        <ul>
+                            <li><a href="https://github.com/rockywuest/sentinel_agent" target="_blank" rel="noopener">Sentinel Agent on GitHub</a></li>
+                            <li><a href="https://github.com/rockywuest/aria-robotics" target="_blank" rel="noopener">ARIA Robotics on GitHub</a></li>
+                            <li><a href="https://github.com/rockywuest/agent_company" target="_blank" rel="noopener">Agent Company on GitHub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="index.html#about">About ROTOMI</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                            <li><a href="impressum.html">Impressum</a></li>
+                            <li><a href="datenschutz.html">Datenschutz</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="footer__bottom">
-                <p>&copy; 2026 FRECH &amp; WUEST GmbH. Alle Rechte vorbehalten.</p>
+                <p>&copy; 2026 FRECH &amp; WUEST GmbH. All rights reserved. ROTOMI is a trademark of FRECH &amp; WUEST GmbH.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Minimal theme toggle for legal pages
-        const theme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', theme);
-        const btn = document.getElementById('themeToggle');
-        if (btn) btn.addEventListener('click', () => {
-            const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROTOMI | ARIA Robotics — Natural Language Robot Control Middleware</title>
+    <meta name="description" content="ARIA Robotics: Autonomous Robotics Integration Architecture. Natural language robot control with safety-first architecture. E-Stop, geofencing, hardware abstraction. The Stripe for Robotics.">
+    <meta name="keywords" content="robotics middleware, natural language robot control, safety robotics, E-Stop, geofencing, PiDog, FastAPI, hardware abstraction, open source robotics, EU robotics compliance">
+    <meta property="og:title" content="ROTOMI ARIA Robotics — Natural Language Robot Control">
+    <meta property="og:description" content="Speak to your robots, don't program them. Safety-first AI middleware with E-Stop, geofencing, and hardware abstraction. Open source.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rotomi.de">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ROTOMI ARIA Robotics">
+    <meta name="twitter:description" content="Natural Language Robot Control. Safety-First. Open Source.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ARIA Robotics",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux, macOS, Windows",
+      "creator": {
+        "@type": "Organization",
+        "name": "FRECH & WUEST GmbH",
+        "url": "https://rotomi.de"
+      },
+      "description": "Autonomous Robotics Integration Architecture. EU-native AI middleware for natural language robot control with safety-first architecture."
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav__container">
+            <a href="index.html" class="nav__brand">
+                <span class="nav__logo">ROTOMI</span>
+            </a>
+            <button class="nav__hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav__menu" id="navMenu">
+                <a href="index.html#products" class="nav__link">Products</a>
+                <a href="#features" class="nav__link">Features</a>
+                <a href="#contact" class="nav__link">Contact</a>
+                <a href="#contact" class="btn btn--primary btn--sm nav__cta">Contact Sales</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="theme-toggle__icon theme-toggle__icon--light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero__background"></div>
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__logo">
+                    <h1 class="hero__title">ARIA Robotics</h1>
+                    <div class="hero__brand">by <span class="hero__brand-name">ROTOMI</span></div>
+                </div>
+                <p class="hero__tagline">Natural Language Robot Control.<br>Safety-First. Open Source.</p>
+                <p class="hero__description">The Stripe for Robotics. EU-native AI middleware that translates human intent into safe robot actions. Speak to your robots, don't program them.</p>
+                <div class="hero__actions">
+                    <a href="https://github.com/rockywuest/aria-robotics" class="btn btn--primary btn--lg" target="_blank" rel="noopener">View on GitHub</a>
+                    <a href="#contact" class="btn btn--outline btn--lg">Contact Sales</a>
+                </div>
+                <div class="hero__badges">
+                    <span class="badge">Python</span>
+                    <span class="badge">FastAPI</span>
+                    <span class="badge">Apache 2.0</span>
+                    <span class="badge">Safety-First</span>
+                    <span class="badge">528 Tests</span>
+                    <span class="badge">98% Coverage</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-bar__content">
+                <span class="trust-bar__label">Core Principles</span>
+                <div class="trust-bar__items">
+                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Safety-First</div>
+                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Natural Language</div>
+                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg> Hardware Abstraction</div>
+                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> EU-Native</div>
+                    <div class="trust-bar__item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Apache 2.0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section id="problem" class="problem">
+        <div class="container">
+            <div class="problem__grid">
+                <div class="problem__text">
+                    <span class="section__label">The Robotics Gap</span>
+                    <h2 class="section__title">Your Robots Are Powerful.<br>But Programming Them Shouldn't Require a PhD.</h2>
+                    <div class="problem__points">
+                        <div class="problem__point"><span class="problem__x">&times;</span><p><strong>Robot SDKs</strong> require deep programming knowledge for basic tasks</p></div>
+                        <div class="problem__point"><span class="problem__x">&times;</span><p><strong>Safety systems</strong> are bolted on after development &mdash; not built into the architecture</p></div>
+                        <div class="problem__point"><span class="problem__x">&times;</span><p><strong>Hardware coupling</strong> means rewriting code for every new robot platform</p></div>
+                        <div class="problem__point"><span class="problem__x">&times;</span><p><strong>No middleware standard</strong> exists between AI intent and robot execution</p></div>
+                    </div>
+                </div>
+                <div class="problem__stats">
+                    <div class="problem__stat">
+                        <div class="problem__stat-number">528</div>
+                        <div class="problem__stat-label">Tests passing, zero failures</div>
+                    </div>
+                    <div class="problem__stat">
+                        <div class="problem__stat-number">98%</div>
+                        <div class="problem__stat-label">Code coverage across all modules</div>
+                    </div>
+                    <div class="problem__stat">
+                        <div class="problem__stat-number">v0.1.0</div>
+                        <div class="problem__stat-label">Pre-alpha &mdash; building in public</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section id="product" class="product">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">Introducing ARIA Robotics</span>
+                <h2 class="section__title">The Middleware Between<br>Human Intent and Robot Action</h2>
+                <p class="section__subtitle">Autonomous Robotics Integration Architecture. A Python/FastAPI framework that translates natural language commands into safe, validated robot actions across any hardware platform.</p>
+            </div>
+            <div class="product__grid">
+                <div class="product__card">
+                    <div class="product__card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                    <h3>Natural Language Control</h3>
+                    <p>Speak to your robots in plain language. ARIA translates human intent into validated robot actions through an AI-powered natural language interface. No programming required.</p>
+                </div>
+                <div class="product__card">
+                    <div class="product__card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                    <h3>Safety by Architecture</h3>
+                    <p>Emergency Stop (E-Stop) at hardware and software levels. Geofencing engine with real-time boundary validation. Constraint checking on every action <strong>before</strong> execution.</p>
+                </div>
+                <div class="product__card">
+                    <div class="product__card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+                    <h3>Hardware Abstraction</h3>
+                    <p>Adapter pattern decouples your logic from hardware. Built-in PiDog and simulator adapters. Write once, deploy to any robot platform with the custom adapter SDK.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label section__label--jp">&#27231;&#33021; &middot; Core Capabilities</span>
+                <h2 class="section__title">Everything You Need to Control<br>Robots Safely and Intelligently</h2>
+            </div>
+            <div class="features__grid">
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Natural Language Interface</h3><p class="feature-card__subtitle">Intent-to-action translation</p><p>Transform plain-language commands into validated robot actions. ARIA parses intent, maps to capabilities, validates constraints, and executes &mdash; all in a single pipeline. No robot programming knowledge required.</p><span class="feature-card__benefit">Say "walk forward slowly" instead of writing servo code</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h3>Emergency Stop System</h3><p class="feature-card__subtitle">Hardware + software E-Stop</p><p>Dual-layer emergency stop with hardware interrupt and software kill signal. Immediate halt of all robot motion with state preservation. Configurable recovery procedures and automatic safety verification before resume.</p><span class="feature-card__benefit">One command stops everything. Instantly. No exceptions.</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div><h3>Geofencing Engine</h3><p class="feature-card__subtitle">Boundary validation in real time</p><p>Define virtual boundaries that robots cannot cross. Real-time position tracking with constraint validation on every movement command. Configurable zones: restricted, warning, and operational areas.</p><span class="feature-card__benefit">Robots stay where they belong. Always.</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div><h3>Hardware Abstraction Layer</h3><p class="feature-card__subtitle">PiDog, simulator, and custom adapters</p><p>Adapter pattern cleanly separates robot logic from hardware specifics. Built-in adapters for SunFounder PiDog and a virtual simulator. Build custom adapters with the SDK for any robot platform.</p><span class="feature-card__benefit">Write your logic once. Deploy to any robot.</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>FastAPI REST API</h3><p class="feature-card__subtitle">Full HTTP API for robot management</p><p>Complete REST API built on FastAPI with automatic OpenAPI documentation. Robot registration, command execution, telemetry retrieval, safety status monitoring, and fleet management &mdash; all via standard HTTP endpoints.</p><span class="feature-card__benefit">Integrate with any system that speaks HTTP</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3>Test Coverage</h3><p class="feature-card__subtitle">528 tests, 98% code coverage</p><p>Comprehensive test suite covering safety systems, hardware abstraction, natural language parsing, API endpoints, and edge cases. CI/CD pipeline ensures every commit meets quality gates before merge.</p><span class="feature-card__benefit">Every safety-critical path tested. No shortcuts.</span></div>
+            </div>
+            <!-- Safety Strip -->
+            <div class="features__security">
+                <h3>Safety-First Architecture</h3>
+                <div class="security-strip">
+                    <span class="security-strip__item">Emergency Stop (Hardware + Software)</span>
+                    <span class="security-strip__item">Geofence Boundary Validation</span>
+                    <span class="security-strip__item">Real-Time Constraint Checking</span>
+                    <span class="security-strip__item">Command Validation Pipeline</span>
+                    <span class="security-strip__item">State Machine Safety Guards</span>
+                    <span class="security-strip__item">Graceful Degradation on Failure</span>
+                    <span class="security-strip__item">Telemetry &amp; Health Monitoring</span>
+                    <span class="security-strip__item">EU Regulatory Compliance Ready</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <div class="section__header section__header--light">
+                <span class="section__label section__label--light">Architecture</span>
+                <h2 class="section__title section__title--light">Layered Safety Architecture.<br>From Natural Language to Robot Action.</h2>
+            </div>
+            <div class="architecture__diagram">
+<pre class="architecture__code"><span class="arch-comment">// ARIA Robotics Stack</span>
+
+<span class="arch-agent">Human Input</span>            <span class="arch-highlight">ARIA Middleware</span>
+<span class="arch-muted">Voice, Text,</span>      &rarr;   <span class="arch-keyword">NLP</span> Intent Parser
+<span class="arch-muted">API Calls</span>              <span class="arch-keyword">Safety</span> Validator (E-Stop + Geofence)
+                       <span class="arch-keyword">Command</span> Pipeline
+<span class="arch-agent">Robot Hardware</span>         <span class="arch-keyword">Hardware</span> Abstraction Layer
+<span class="arch-muted">PiDog, Custom,</span>  &larr;   <span class="arch-keyword">Adapter</span> SDK
+<span class="arch-muted">Simulator</span>              <span class="arch-keyword">Telemetry</span> &amp; Health Monitor
+
+<span class="arch-muted">Framework: Python / FastAPI / Pydantic</span>
+<span class="arch-muted">License:   Apache 2.0 | Version: pre-alpha v0.1.0</span></pre>
+            </div>
+            <div class="architecture__deploy">
+                <div class="deploy-card"><h4>pip install</h4><p>Standard Python package. Install from PyPI or source. Works on Linux, macOS, and Windows with Python 3.10+.</p><code>pip install aria-robotics</code></div>
+                <div class="deploy-card"><h4>PiDog Adapter</h4><p>Built-in adapter for SunFounder PiDog. Connect to your robot dog with zero hardware-specific code in your application logic.</p><code>aria run --adapter pidog</code></div>
+                <div class="deploy-card"><h4>Simulator Mode</h4><p>Virtual robot environment for testing and development. No hardware required. Full API compatibility with production adapters.</p><code>aria run --adapter simulator</code></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="section__header section__header--light">
+                <h2 class="section__title section__title--light">Built to Production Standards</h2>
+            </div>
+            <div class="stats__grid">
+                <div class="stat-item"><div class="stat-number" data-target="528">0</div><div class="stat-label">Tests Passing, Zero Failures</div></div>
+                <div class="stat-item"><div class="stat-number" data-target="98">0</div><div class="stat-label">Percent Code Coverage</div></div>
+                <div class="stat-item"><div class="stat-number" data-target="4">0</div><div class="stat-label">Target Audiences</div></div>
+                <div class="stat-item"><div class="stat-number" data-target="2">0</div><div class="stat-label">Built-in Hardware Adapters</div></div>
+            </div>
+            <div class="stats__badges">
+                <span class="stats__badge">Python / FastAPI</span>
+                <span class="stats__badge">Pydantic Validation</span>
+                <span class="stats__badge">Apache 2.0 License</span>
+                <span class="stats__badge">CI/CD Pipeline</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">FAQ</span>
+                <h2 class="section__title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq__list">
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>What does "The Stripe for Robotics" mean?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>Stripe made payment integration simple by abstracting away the complexity of payment processing behind a clean API. ARIA does the same for robotics &mdash; it abstracts away the complexity of robot hardware, safety systems, and command protocols behind a natural language interface and REST API. You focus on what you want the robot to do. ARIA handles how.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>What robots does ARIA support?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>ARIA ships with two built-in adapters: SunFounder PiDog (a Raspberry Pi robot dog) and a virtual simulator for development and testing. The hardware abstraction layer and adapter SDK allow you to add support for any robot platform. If you can control it with Python, you can build an ARIA adapter for it.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>How does the safety system work?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>Safety is built into every layer. The Emergency Stop (E-Stop) system provides both hardware-level interrupt and software kill signals for immediate halt. The geofencing engine validates every movement command against defined boundaries in real time. The command validation pipeline checks constraints before any action reaches the hardware. Safety is architecture, not an add-on.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>Who is ARIA for?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>ARIA targets four audiences: educators who want to teach robotics without low-level programming, hobbyists building projects with robot platforms like PiDog, researchers exploring natural language robot control, and enterprise teams automating manufacturing and logistics workflows with safety-first robot integration.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>Is ARIA production-ready?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>ARIA is currently in pre-alpha (v0.1.0). The core architecture, safety systems, and test suite are solid &mdash; 528 tests at 98% coverage. We are building in public and welcome early adopters and contributors. For production manufacturing use cases, contact us to discuss a pilot program.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false"><span>Is this really open source?</span><svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-item__answer"><p>Yes. The full codebase is available on GitHub under the Apache 2.0 license. All safety systems, hardware adapters, API endpoints, and tests are included. Commercial support and enterprise integrations are available through FRECH &amp; WUEST GmbH.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta__content">
+                <h2 class="cta__title">Ready to Talk to Your Robots?</h2>
+                <p class="cta__subtitle">Whether you're an educator, hobbyist, researcher, or enterprise team &mdash; let's explore how ARIA can simplify your robotics workflow.</p>
+                <form class="cta__form" id="contactForm" action="send-mail.php" method="POST">
+                    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="product" value="aria-robotics">
+                    <div class="cta__form-grid">
+                        <div class="form-group"><label for="name" class="form-label">Name *</label><input type="text" id="name" name="name" class="form-control" required></div>
+                        <div class="form-group"><label for="email" class="form-label">Email *</label><input type="email" id="email" name="email" class="form-control" required></div>
+                        <div class="form-group"><label for="company" class="form-label">Company / Institution</label><input type="text" id="company" name="company" class="form-control"></div>
+                        <div class="form-group"><label for="usecase" class="form-label">Use Case</label><select id="usecase" name="usecase" class="form-control"><option value="">Select category</option><option value="education">Education / Teaching</option><option value="hobby">Hobby / Maker</option><option value="research">Research / Academic</option><option value="manufacturing">Enterprise / Manufacturing</option><option value="other">Other</option></select></div>
+                        <div class="form-group form-group--full"><label for="message" class="form-label">Message (optional)</label><textarea id="message" name="message" class="form-control" rows="4"></textarea></div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--lg">Get in Touch</button>
+                </form>
+                <p class="cta__email">Or email us directly: <a href="mailto:info@frechundwuest.de">info@frechundwuest.de</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__logo">ROTOMI</div>
+                    <p class="footer__tagline">Precision in Motion, Intelligence in Action.</p>
+                    <p class="footer__company">by FRECH &amp; WUEST GmbH</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section"><h4>Products</h4><ul><li><a href="sentinel-agent.html">Sentinel Agent</a></li><li><a href="aria-robotics.html">ARIA Robotics</a></li><li><a href="agent-company.html">Agent Company</a></li></ul></div>
+                    <div class="footer__section"><h4>Open Source</h4><ul><li><a href="https://github.com/rockywuest/sentinel_agent" target="_blank" rel="noopener">Sentinel Agent on GitHub</a></li><li><a href="https://github.com/rockywuest/aria-robotics" target="_blank" rel="noopener">ARIA Robotics on GitHub</a></li><li><a href="https://github.com/rockywuest/agent_company" target="_blank" rel="noopener">Agent Company on GitHub</a></li></ul></div>
+                    <div class="footer__section"><h4>Company</h4><ul><li><a href="index.html#about">About ROTOMI</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+                </div>
+            </div>
+            <div class="footer__bottom"><p>&copy; 2026 FRECH &amp; WUEST GmbH. All rights reserved. ROTOMI is a trademark of FRECH &amp; WUEST GmbH.</p></div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

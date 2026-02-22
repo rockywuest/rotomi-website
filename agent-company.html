@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROTOMI | Agent Company — Multi-Agent Orchestration Platform</title>
+    <meta name="description" content="Multi-agent orchestration platform for mission-based workflow automation. Pre-configured AI team templates for Marketing, Sales, HR, Recruiting, and Product. Built by FRECH & WUEST GmbH.">
+    <meta name="keywords" content="multi-agent orchestration, AI workflow automation, mission-based workflows, AI team templates, Supabase, Next.js, human oversight, agent collaboration">
+    <meta property="og:title" content="ROTOMI Agent Company — Multi-Agent Orchestration Platform">
+    <meta property="og:description" content="Deploy AI agent teams with mission-based workflows, pre-built team templates, and human oversight. Next.js + Supabase.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rotomi.de">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ROTOMI Agent Company">
+    <meta name="twitter:description" content="Multi-Agent Orchestration. Mission-Based Workflows. Human Oversight.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Agent Company",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Linux, Docker, Vercel",
+      "creator": {
+        "@type": "Organization",
+        "name": "FRECH & WUEST GmbH",
+        "url": "https://rotomi.de"
+      },
+      "description": "Multi-agent orchestration platform for mission-based workflow automation with pre-configured AI team templates and human oversight."
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav__container">
+            <a href="index.html" class="nav__brand">
+                <span class="nav__logo">ROTOMI</span>
+            </a>
+            <button class="nav__hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav__menu" id="navMenu">
+                <a href="index.html#products" class="nav__link">Products</a>
+                <a href="#features" class="nav__link">Features</a>
+                <a href="#contact" class="nav__link">Contact</a>
+                <a href="#contact" class="btn btn--primary btn--sm nav__cta">Contact Sales</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="theme-toggle__icon theme-toggle__icon--light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero__background"></div>
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__logo">
+                    <h1 class="hero__title">Agent Company</h1>
+                    <div class="hero__brand">by <span class="hero__brand-name">ROTOMI</span></div>
+                </div>
+                <p class="hero__tagline">Multi-Agent Orchestration.<br>Mission-Based Workflows. Human Oversight.</p>
+                <p class="hero__description">Deploy pre-configured AI agent teams that collaborate on missions, deliver results, and operate under human governance. From Marketing to Product &mdash; your AI workforce, orchestrated.</p>
+                <div class="hero__actions">
+                    <a href="https://github.com/rockywuest/agent_company" class="btn btn--primary btn--lg" target="_blank" rel="noopener">View on GitHub</a>
+                    <a href="#contact" class="btn btn--outline btn--lg">Contact Sales</a>
+                </div>
+                <div class="hero__badges">
+                    <span class="badge">Next.js</span>
+                    <span class="badge">Supabase</span>
+                    <span class="badge">5 Teams</span>
+                    <span class="badge">12 Tables</span>
+                    <span class="badge">RLS</span>
+                    <span class="badge">Mission Workflows</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section id="product" class="product">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">Introducing Agent Company</span>
+                <h2 class="section__title">AI Teams That Work Together.<br>Governed by Humans.</h2>
+                <p class="section__subtitle">Mission-based orchestration platform where specialized AI agents collaborate within pre-built team structures, delivering results through governed workflows with human approval at every critical step.</p>
+            </div>
+            <div class="product__grid">
+                <div class="product__card">
+                    <div class="product__card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+                    <h3>Mission-Based Workflows</h3>
+                    <p>Define goals, assign agent teams, and let them collaborate autonomously. Missions flow through proposal, review, execution, and delivery &mdash; with human checkpoints at every stage.</p>
+                </div>
+                <div class="product__card">
+                    <div class="product__card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3>Pre-Built Team Templates</h3>
+                    <p>Five ready-to-deploy team configurations: Marketing, Sales, HR, Recruiting, and Product. Each team includes specialized agents with role-specific capabilities tuned for their domain.</p>
+                </div>
+                <div class="product__card">
+                    <div class="product__card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></div>
+                    <h3>Governed Collaboration</h3>
+                    <p>Human oversight on mission approval. Row-level security isolates tenant data. Every agent action is scoped, every mission requires sign-off, every result is traceable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label section__label--jp">&#27231;&#33021; &middot; Core Capabilities</span>
+                <h2 class="section__title">Everything You Need to Orchestrate<br>AI Agent Teams</h2>
+            </div>
+            <div class="features__grid">
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3>Mission Proposal System</h3><p class="feature-card__subtitle">Create, review, approve missions</p><p>Define mission objectives and scope. Agent teams generate proposals with estimated deliverables. Humans review and approve before execution begins. Full lifecycle tracking from proposal to completion.</p><span class="feature-card__benefit">Every mission requires human sign-off before agents execute</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><h3>Marketing Team</h3><p class="feature-card__subtitle">Content, campaigns, analytics agents</p><p>Specialized agents for content strategy, campaign management, and performance analytics. Collaborate on marketing missions from brief to deliverable with brand-consistent output.</p><span class="feature-card__benefit">From campaign brief to multi-channel content in one mission</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Sales Team</h3><p class="feature-card__subtitle">Prospecting, outreach, CRM agents</p><p>AI agents that research prospects, craft personalized outreach, and manage CRM updates. Coordinate across the sales pipeline with human approval on high-value interactions.</p><span class="feature-card__benefit">Prospect research to qualified pipeline, governed by your sales playbook</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>HR &amp; Recruiting Teams</h3><p class="feature-card__subtitle">Screening, scheduling, onboarding agents</p><p>Dedicated teams for candidate screening, interview scheduling, and employee onboarding workflows. Agents handle repetitive tasks while humans make the final hiring decisions.</p><span class="feature-card__benefit">Automate screening and scheduling, keep humans in the hiring loop</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 0 1 0 4h-.09c-.658.003-1.25.396-1.51 1z"/></svg></div><h3>Product Team</h3><p class="feature-card__subtitle">Research, planning, roadmap agents</p><p>Agents that conduct market research, synthesize user feedback, draft product requirements, and maintain roadmap documentation. Collaborate on product strategy missions with structured deliverables.</p><span class="feature-card__benefit">From user research to PRD drafts, orchestrated by your product vision</span></div>
+                <div class="feature-card"><div class="feature-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Database Security</h3><p class="feature-card__subtitle">12 tables, RLS, Supabase Auth</p><p>PostgreSQL with 12 purpose-built tables and row-level security on every table. Supabase Auth handles identity. Tenant isolation ensures data boundaries are enforced at the database level, not the application level.</p><span class="feature-card__benefit">Security enforced at the database layer, not just the application</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <div class="section__header section__header--light">
+                <span class="section__label section__label--light">Architecture</span>
+                <h2 class="section__title section__title--light">Mission-Driven Architecture.<br>Built on Next.js + Supabase.</h2>
+            </div>
+            <div class="architecture__diagram">
+<pre class="architecture__code"><span class="arch-comment">// Agent Company Stack</span>
+
+<span class="arch-agent">Human Operator</span>         <span class="arch-highlight">Mission Control</span>
+<span class="arch-muted">Define goals,</span>     &rarr;   <span class="arch-keyword">Mission</span> Proposal &amp; Approval
+<span class="arch-muted">review results</span>         <span class="arch-keyword">Team</span> Assignment &amp; Routing
+                        <span class="arch-keyword">Agent</span> Collaboration Engine
+
+<span class="arch-agent">AI Agent Teams</span>         <span class="arch-highlight">Team Templates</span>
+<span class="arch-muted">Marketing, Sales,</span>      <span class="arch-keyword">Marketing</span> &mdash; Content, Campaigns, Analytics
+<span class="arch-muted">HR, Recruiting,</span>  &rarr;   <span class="arch-keyword">Sales</span> &mdash; Prospecting, Outreach, CRM
+<span class="arch-muted">Product</span>                <span class="arch-keyword">HR</span> &mdash; Screening, Scheduling, Onboarding
+                        <span class="arch-keyword">Recruiting</span> &mdash; Sourcing, Evaluation
+                        <span class="arch-keyword">Product</span> &mdash; Research, Planning, Roadmap
+
+<span class="arch-muted">Frontend: Next.js 16 (App Router, Server Components)</span>
+<span class="arch-muted">Backend:  Supabase (PostgreSQL, Auth, RLS, Realtime)</span>
+<span class="arch-muted">Tables:   12 with Row-Level Security isolation</span></pre>
+            </div>
+            <div class="architecture__deploy">
+                <div class="deploy-card"><h4>Local Development</h4><p>Full-stack development with Next.js dev server and Supabase CLI. Hot reload, type safety, and local database.</p><code>npm run dev</code></div>
+                <div class="deploy-card"><h4>Supabase Cloud</h4><p>Managed PostgreSQL with built-in Auth, Realtime subscriptions, and automatic RLS enforcement. Zero DevOps.</p><code>supabase db push</code></div>
+                <div class="deploy-card"><h4>Vercel / Self-Hosted</h4><p>Deploy to Vercel for edge performance or self-host with Docker. Supabase can run self-hosted or managed.</p><code>vercel deploy --prod</code></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta__content">
+                <h2 class="cta__title">Ready to Deploy Your AI Agent Teams?</h2>
+                <p class="cta__subtitle">Get started with Agent Company. Pre-configured teams, mission-based workflows, and human oversight built in from day one.</p>
+                <form class="cta__form" id="contactForm" action="send-mail.php" method="POST">
+                    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="product" value="agent-company">
+                    <div class="cta__form-grid">
+                        <div class="form-group"><label for="name" class="form-label">Name *</label><input type="text" id="name" name="name" class="form-control" required></div>
+                        <div class="form-group"><label for="email" class="form-label">Business Email *</label><input type="email" id="email" name="email" class="form-control" required></div>
+                        <div class="form-group"><label for="company" class="form-label">Company *</label><input type="text" id="company" name="company" class="form-control" required></div>
+                        <div class="form-group"><label for="teams" class="form-label">Teams of Interest</label><select id="teams" name="teams" class="form-control"><option value="">Select a team</option><option value="marketing">Marketing Team</option><option value="sales">Sales Team</option><option value="hr">HR Team</option><option value="recruiting">Recruiting Team</option><option value="product">Product Team</option><option value="all">All Teams</option></select></div>
+                        <div class="form-group"><label for="usecase" class="form-label">Primary Use Case</label><select id="usecase" name="usecase" class="form-control"><option value="">Select use case</option><option value="content-automation">Content Automation</option><option value="sales-pipeline">Sales Pipeline</option><option value="talent-acquisition">Talent Acquisition</option><option value="product-research">Product Research</option><option value="workflow-automation">General Workflow Automation</option><option value="other">Other</option></select></div>
+                        <div class="form-group form-group--full"><label for="message" class="form-label">Message (optional)</label><textarea id="message" name="message" class="form-control" rows="4"></textarea></div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--lg">Contact Sales</button>
+                </form>
+                <p class="cta__email">Or email us directly: <a href="mailto:info@frechundwuest.de">info@frechundwuest.de</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__logo">ROTOMI</div>
+                    <p class="footer__tagline">Precision in Motion, Intelligence in Action.</p>
+                    <p class="footer__company">by FRECH & WUEST GmbH</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section"><h4>Products</h4><ul><li><a href="sentinel-agent.html">Sentinel Agent</a></li><li><a href="aria-robotics.html">ARIA Robotics</a></li><li><a href="agent-company.html">Agent Company</a></li></ul></div>
+                    <div class="footer__section"><h4>Open Source</h4><ul><li><a href="https://github.com/rockywuest/sentinel_agent" target="_blank" rel="noopener">Sentinel Agent on GitHub</a></li><li><a href="https://github.com/rockywuest/aria-robotics" target="_blank" rel="noopener">ARIA Robotics on GitHub</a></li><li><a href="https://github.com/rockywuest/agent_company" target="_blank" rel="noopener">Agent Company on GitHub</a></li></ul></div>
+                    <div class="footer__section"><h4>Company</h4><ul><li><a href="index.html#about">About ROTOMI</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+                </div>
+            </div>
+            <div class="footer__bottom"><p>&copy; 2026 FRECH & WUEST GmbH. All rights reserved. ROTOMI is a trademark of FRECH & WUEST GmbH.</p></div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
